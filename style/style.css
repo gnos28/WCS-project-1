@@ -1,0 +1,70 @@
+/* Fonts */
+@font-face {
+    font-family: 'Square One';
+    src: url('../fonts/SquareOne.woff2') format('woff2'),
+        url('../fonts/SquareOne.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Square One';
+    src: url('../fonts/SquareOne-Bold.woff2') format('woff2'),
+        url('../fonts/SquareOne-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --var-name1: #003A6B;
+    --var-name2: #2C5D87;
+    --var-name3: #5880a2;
+    --var-name4: #83A3BE;
+    --var-name5: #AFC6D9;
+    --var-name6: #DBE9F5;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'Square One', sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--var-name3);
+}
+
