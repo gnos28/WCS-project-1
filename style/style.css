@@ -96,13 +96,15 @@ h1 {
     }
 
     .presentation-text {
-        margin: 1rem;
+        margin: 1rem auto;
         padding: 0.5rem;
         width: 99%; 
         height: 200px;
-        overflow: scroll;
-        overflow-x: hidden;
+        /* overflow-y: scroll;
+        overflow-x: hidden; */
+        /* background-color: var(--var-name6); */
         color: var(--var-name1);
+        box-shadow:#5880a2 0px 5px 15px;
     }
     
     .photo-team {
