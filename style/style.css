@@ -50,11 +50,6 @@
     padding: 0;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-}
-
 body {
     font-family: 'Roboto';
     font-style: normal;
@@ -67,4 +62,58 @@ h1 {
     text-align: center;
     color: var(--var-name3);
 }
+
+@media screen and (max-width: 575.98px) {
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .presentation {
+        display: flex; 
+        justify-content: space-around;
+        margin-top: 1rem;
+    }
+
+    .easy-photo {
+        width: 125px;
+        height: 125px;
+    }
+
+    .presentation > h2 {
+        color: var(--var-name4);
+    }
+
+    .presentation-text {
+        margin: 1rem;
+        padding: 0.5rem;
+        width: 99%; 
+        height: 200px;
+        overflow: scroll;
+        overflow-x: hidden;
+        color: var(--var-name1);
+    }
+    
+    .photo-team {
+        display: flex; 
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 575.99px) and (max-width: 767.98px) {
+}
+
+@media screen and (min-width: 767.99px) and (max-width: 991.98px) {
+}
+
+@media screen and (min-width: 911.99px) and (max-width: 1199.98px) {
+}
+
+
 
