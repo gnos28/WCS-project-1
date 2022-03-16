@@ -68,3 +68,8 @@ h1 {
     color: var(--var-name3);
 }
 
+.accueil h2 {
+    padding: 10px;
+    font-size: 20px
+}
+
