@@ -1,70 +1,170 @@
 /* Fonts */
 @font-face {
-    font-family: 'Square One';
-    src: url('../fonts/SquareOne.woff2') format('woff2'),
-        url('../fonts/SquareOne.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Square One";
+  src: url("../fonts/SquareOne.woff2") format("woff2"),
+    url("../fonts/SquareOne.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Square One';
-    src: url('../fonts/SquareOne-Bold.woff2') format('woff2'),
-        url('../fonts/SquareOne-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Square One";
+  src: url("../fonts/SquareOne-Bold.woff2") format("woff2"),
+    url("../fonts/SquareOne-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
-        url('../fonts/Roboto-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-        url('../fonts/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
-    --var-name1: #003A6B;
-    --var-name2: #2C5D87;
-    --var-name3: #5880a2;
-    --var-name4: #83A3BE;
-    --var-name5: #AFC6D9;
-    --var-name6: #DBE9F5;
-  }
+  --var-name1: #003a6b;
+  --var-name2: #2c5d87;
+  --var-name3: #5880a2;
+  --var-name4: #83a3be;
+  --var-name5: #afc6d9;
+  --var-name6: #dbe9f5;
+  --var-mainfont: #0f0f0f;
+  --header-height: 100px;
+}
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    width: 1200px;
-    margin: 0 auto;
+  /* width: 1200px; */
+  /* margin: 0 auto; */
 }
 
 body {
-    font-family: 'Roboto';
-    font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: var(--var-mainfont);
+  background-color: rgb(163, 163, 238);
+  position: relative;
 }
 
 h1 {
-    font-family: 'Square One', sans-serif;
-    font-size: 4rem;
-    font-weight: bold;
-    text-align: center;
-    color: var(--var-name3);
+  font-family: "Square One", sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--var-name2);
 }
 
+header > .container {
+  display: flex;
+  width: 100%;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: calc(0.02 * var(--header-height));
+  padding: 0 calc(0.02 * var(--header-height));
+  background-color: var(--var-name6);
+}
+
+header > .container h1 {
+  font-size: 2rem;
+  line-height: 100%;
+  color: var(--var-name2);
+}
+
+header > .container img {
+  /* display: block;
+    height: 90%; */
+  /* width: 50%; */
+  height: calc(0.8 * var(--header-height));
+}
+
+header > .container img.burger-icon {
+  height: calc(0.4 * var(--header-height));
+}
+
+nav {
+  position: absolute;
+  display: none;
+  top: var(--header-height);
+  background-color: var(--var-name2);
+  filter: opacity(0.8);
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+  z-index: 1;
+  /* height:100%; */
+}
+
+nav > ul {
+  margin-left: 1rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+nav > ul > li {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.fill-space {
+  height: calc(100vh - var(--header-height));
+  width: 100%;
+  background-color: grey;
+}
+
+footer > .container {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  background-color: var(--var-name2);
+  padding: 20px 35px;
+}
+
+footer > .container p {
+  color: var(--var-name5);
+  font-size: 0.9rem;
+}
+
+p.credits {
+  font-variant: small-caps;
+  font-weight: bold;
+  text-align: center;
+}
+
+.burgerShow {
+  display: block;
+  filter: opacity(0);
+  transition: all 2s;
+  backdrop-filter: blur(5px);
+}
+
+.burgerShow.burgerAnimationIn {
+  filter: opacity(1);
+}
+
+.burgerAnimationOut {
+  filter: opacity(1);
+  /* transition: opacity 2s; */
+}
