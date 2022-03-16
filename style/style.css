@@ -52,11 +52,6 @@
   padding: 0;
 }
 
-.container {
-  /* width: 1200px; */
-  /* margin: 0 auto; */
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -167,4 +162,74 @@ p.credits {
 .burgerAnimationOut {
   filter: opacity(1);
   /* transition: opacity 2s; */
+}
+
+.about .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about h1 {
+  font-size: 3rem;
+}
+
+.presentation {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.easy-photo {
+  width: 125px;
+  height: 125px;
+  border-radius: 2px;
+}
+
+.team-photo {
+  width: 125px;
+  height: 125px;
+  border-radius: 2px;
+}
+
+.presentation > h2 {
+  color: var(--var-name4);
+}
+
+.presentation-text {
+  margin: 1rem auto;
+  padding: 0.5rem;
+  width: 99%;
+  height: 200px;
+  color: var(--var-name1);
+  box-shadow: #5880a2 0px 5px 15px;
+}
+
+.photo-team {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 575.98px) {
+  .about h1 {
+    font-size: 4rem;
+  }
+
+  .easy-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .presentation-text {
+    width: 95%;
+    overflow: scroll;
+    overflow-x: hidden;
+    color: var(--var-name1);
+  }
+}
+
+@media (min-width: 767.99px) {
+}
+
+@media (min-width: 911.99px) {
 }
