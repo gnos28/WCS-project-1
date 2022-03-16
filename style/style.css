@@ -54,7 +54,6 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 12px;
-
 }
 
 body {
@@ -89,17 +88,11 @@ body {
     left: calc(50% - 16px);
 }
 
-.wrapper-team-top {
+.wrapper-team {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.wrapper-team-bottom {
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .box {
@@ -107,6 +100,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 47%;
+    text-decoration: none;
     margin-bottom: 25px;
 }
 
@@ -145,7 +139,6 @@ body {
         top: 50px;
         left: calc(50% - 19px);
     }
-
 }
 
 @media (min-width: 575.98px) {
@@ -169,5 +162,14 @@ body {
 
     .box h3 {
         font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 767.98px) {
+
+    /* breakpoints section square-team */
+    .container {
+        width: 80%;
+        border: 1px solid red;
     }
 }
