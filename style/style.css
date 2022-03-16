@@ -48,11 +48,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 body {
@@ -70,6 +72,18 @@ h1 {
 
 .accueil h2 {
     padding: 10px;
-    font-size: 20px
+    font-size : clamp(0.5rem, 16px, 4rem);
+    text-align: center;
+    width: 100%;
 }
 
+.accueil .container {
+    width: 100%;
+}
+
+.accueil img {
+    padding : 20px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
