@@ -51,7 +51,7 @@
 }
 
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
 }
 
@@ -84,11 +84,13 @@ h1 {
     .easy-photo {
         width: 125px;
         height: 125px;
+        border-radius: 2px;
     }
 
     .team-photo {
         width: 125px;
         height: 125px;
+        border-radius: 2px;
     }
 
     .presentation > h2 {
