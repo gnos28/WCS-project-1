@@ -50,17 +50,11 @@
     padding: 0;
 }
 
-/* 
-.container {
-    width: 1200px;
-    margin: 0 auto;
-} */
-
-
 .container {
     width: 100%;
     margin: 0 auto;
     padding: 0 12px;
+
 }
 
 body {
@@ -176,5 +170,4 @@ body {
     .box h3 {
         font-size: 1.2rem;
     }
-
 }
