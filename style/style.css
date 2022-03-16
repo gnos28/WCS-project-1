@@ -129,12 +129,6 @@ nav > ul > li {
   font-family: "Roboto", sans-serif;
 }
 
-.fill-space {
-  height: calc(100vh - var(--header-height));
-  width: 100%;
-  background-color: grey;
-}
-
 footer > .container {
   display: flex;
   flex-direction: column;
