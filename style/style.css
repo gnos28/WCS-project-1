@@ -164,6 +164,7 @@ p.credits {
   /* transition: opacity 2s; */
 }
 
+/* présentation détaillée mobile first */
 .about .container {
   width: 100%;
   margin: 0 auto;
@@ -201,13 +202,23 @@ p.credits {
   padding: 0.5rem;
   width: 99%;
   height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   color: var(--var-name1);
   box-shadow: #5880a2 0px 5px 15px;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+.presentation-text::-webkit-scrollbar {
+  display: none; 
+
 }
 
 .photo-team {
   display: flex;
   justify-content: space-around;
+  margin: 1rem;
 }
 
 @media (min-width: 575.98px) {
