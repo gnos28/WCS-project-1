@@ -77,6 +77,10 @@ h1 {
   color: var(--var-name2);
 }
 
+section {
+  height: calc(100vh - var(--header-height));
+}
+
 /* modif header & header > .container pour passer en position fixed */
 
 header {
@@ -627,8 +631,8 @@ p.credits {
     display: none;
   }
 
-  /* .team-members {
-    display:block;
+  .team-members {
+    display:flex;
     justify-content: space-around;
     margin: 1rem;
     flex-wrap: wrap;
@@ -640,7 +644,7 @@ p.credits {
     width: 125px;
     height: 125px;
     border-radius: 2px;
-  } */
+  }
 
   /* fin breakpoint section accueil */
 }
