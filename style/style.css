@@ -44,6 +44,7 @@
   --var-name6: #dbe9f5;
   --var-mainfont: #0f0f0f;
   --header-height: 100px;
+  --burger-animation-speed: .4s;
 }
 
 * {
@@ -64,6 +65,7 @@ body {
   color: var(--var-mainfont);
   background-color: rgb(163, 163, 238);
   position: relative;
+  padding-top:var(--header-height); /* pour header en position fixed */
 }
 
 h1 {
@@ -74,20 +76,28 @@ h1 {
   color: var(--var-name2);
 }
 
+/* modif header & header > .container pour passer en position fixed */
+
+header {
+  position:fixed;
+  top:0;
+  background-color: var(--var-name6);
+  z-index: 100;
+  width: 100%;
+}
+
 header > .container {
   display: flex;
-  width: 100%;
   height: var(--header-height);
   justify-content: space-between;
   align-items: center;
   position: relative;
-  gap: calc(0.02 * var(--header-height));
-  padding: 0 calc(0.02 * var(--header-height));
-  background-color: var(--var-name6);
+  gap: calc(0.1 * var(--header-height));
+  padding: 0 calc(0.1 * var(--header-height));
 }
 
 header > .container h1 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 7vw, 5.5rem);
   line-height: 100%;
   color: var(--var-name2);
 }
@@ -103,14 +113,23 @@ header > .container img.burger-icon {
   height: calc(0.4 * var(--header-height));
 }
 
+/* ------------ MENU BURGER --------------- */
+
+main{
+  transition: filter var(--burger-animation-speed) ease-in-out calc(var(--burger-animation-speed)*.5);
+}
+
+main.blur{
+  filter:blur(20px);
+}
+
 nav {
-  position: absolute;
+  position: fixed;
   display: none;
   top: var(--header-height);
   background-color: var(--var-name2);
-  filter: opacity(0.8);
   height: calc(100vh - var(--header-height));
-  width: 100%;
+  width: 100vw;
   z-index: 1;
   /* height:100%; */
 }
@@ -122,12 +141,44 @@ nav > ul {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
+  /* overflow: hidden; */
 }
 
 nav > ul > li {
-  font-size: 3rem;
+  display: block;
+  font-size: calc(0.07 * (100vh - var(--header-height)));
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color:var(--var-name6);
+  transform-origin: top left;
+  transition: transform var(--burger-animation-speed) cubic-bezier(.04,.49,.45,1.42) var(--burger-animation-speed);
+  transform: translateX(100vw);
 }
+
+nav > ul > li.liAnimationIn
+{
+  transform: translateX(0);
+}
+
+.burgerShow {
+  display: block;
+  filter : opacity(0);
+  transform-origin: top right;
+  transform: scale(0);
+  transition: all var(--burger-animation-speed) ease-out;
+}
+
+.burgerAnimationIn {
+  filter : opacity(.7);
+  transform: scale(1);
+}
+
+.burgerAnimationOut {
+  filter: opacity(0);
+  /* transition: opacity 2s; */
+}
+
+/* ------------ FIN MENU BURGER --------------- */
 
 footer > .container {
   display: flex;
@@ -146,22 +197,6 @@ p.credits {
   font-variant: small-caps;
   font-weight: bold;
   text-align: center;
-}
-
-.burgerShow {
-  display: block;
-  filter: opacity(0);
-  transition: all 2s;
-  backdrop-filter: blur(5px);
-}
-
-.burgerShow.burgerAnimationIn {
-  filter: opacity(1);
-}
-
-.burgerAnimationOut {
-  filter: opacity(1);
-  /* transition: opacity 2s; */
 }
 
 .about .container {
