@@ -2,8 +2,23 @@ const burgerMenu = document.getElementById("burger-menu");
 const nav = document.querySelector("nav");
 const main = document.querySelector("main");
 const lis = [...document.querySelectorAll("nav > ul > li")];
+const liLinks = [...document.querySelectorAll("nav > ul > li a")];
 
 let burgerShow = false;
+
+const hideBurgerMenu = () => {
+  nav.classList.remove("burgerAnimationIn");
+  main.classList.remove("blur");
+
+  let timer = window.setTimeout(() => {
+    nav.classList.remove("burgerShow");
+  }, 400);
+
+  lis.forEach((li) => li.classList.remove("liAnimationIn"));
+  burgerShow = false;
+
+  console.log("hide burger Menu")
+};
 
 burgerMenu.addEventListener("click", (e) => {
   e.preventDefault();
@@ -17,25 +32,18 @@ burgerMenu.addEventListener("click", (e) => {
     );
     timer = window.setTimeout(() => {
       lis.forEach((li, index) => {
-        let subTimer = window.setTimeout(
-          () => {
-                li.classList.add("liAnimationIn");
-            },
-          50*index
-        );
+        let subTimer = window.setTimeout(() => {
+          li.classList.add("liAnimationIn");
+        }, 50 * index);
       });
     }, 100);
 
     burgerShow = true;
-  } else {
-    nav.classList.remove("burgerAnimationIn");
-    main.classList.remove("blur");
-    
-    let timer = window.setTimeout(() => {nav.classList.remove("burgerShow");}, 400)
-
-    lis.forEach((li) => li.classList.remove("liAnimationIn"));
-    burgerShow = false;
-  }
+  } else hideBurgerMenu()
 
   // nav.classList.toggle("burgerAnimation")
 });
+
+liLinks.forEach((link) => link.addEventListener("click", (e) => {
+  hideBurgerMenu()
+}));
