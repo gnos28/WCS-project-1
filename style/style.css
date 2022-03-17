@@ -401,8 +401,7 @@ p.credits {
     }
 
     /* breakpoint section accueil */
-    .photo-texte {
-        display : grid;
-        grid-template-columns: 1fr 1fr;
+    .texte-photo {
+        display : flex;
+        flex-direction: row-reverse;
     }
-}
