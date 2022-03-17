@@ -216,6 +216,10 @@ p.credits {
   text-align: center;
 }
 
+
+
+/* présentation détaillée mobile first */
+
 .about .container {
   width: 100%;
   margin: 0 auto;
@@ -245,7 +249,7 @@ p.credits {
 }
 
 .presentation > h2 {
-  color: var(--var-name4);
+  padding-left: 1rem;
 }
 
 .presentation-text {
@@ -253,16 +257,30 @@ p.credits {
   padding: 0.5rem;
   width: 99%;
   height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   color: var(--var-name1);
   box-shadow: #5880a2 0px 5px 15px;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
 
-.photo-team {
+.presentation-text::-webkit-scrollbar {
+  display: none; 
+
+}
+
+.team-going {
   display: flex;
   justify-content: space-around;
+  margin: 1rem;
+  flex-wrap: wrap;
+  gap: 0.7rem;
 }
 
 @media (min-width: 575.98px) {
+
+  /* présentation détaillée phone landscape */
   .about h1 {
     font-size: 4rem;
   }
@@ -277,6 +295,27 @@ p.credits {
     overflow: scroll;
     overflow-x: hidden;
     color: var(--var-name1);
+  }
+
+    /* breakpoints section square-team */
+    .box {
+      width: 30%;
+  }
+
+  .box-1,
+  .box-2,
+  .box-4 {
+      margin-right: 10px;
+  }
+
+  .box-2,
+  .box-3,
+  .box-5 {
+      margin-left: 10px;
+  }
+
+  .box h3 {
+      font-size: 1.2rem;
   }
 }
 
