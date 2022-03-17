@@ -64,7 +64,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   color: var(--var-mainfont);
-  background-color: rgb(163, 163, 238);
+  /* background-color: rgb(163, 163, 238); */
   position: relative;
   padding-top:var(--header-height); /* pour header en position fixed */
 }
@@ -288,9 +288,10 @@ p.credits {
 
 .accueil h2 {
     padding: 10px;
-    font-size : clamp(0.5rem, 16px, 4rem);
+    font-size : clamp(1rem, 24px, 4rem);
     text-align: center;
     width: 100%;
+    color : var(--var-name2)
 }
 
 .accueil .container {
@@ -340,11 +341,14 @@ p.credits {
 }
 
 .accueil p:last-child {
-    background-color: #AFC6D9;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+    
     padding: 10px 20px;
     display: flex;
     align-items: center;
+    font-size : clamp(0.5rem, 20px, 4rem);
+    color: var(--var-name2);
+    border-radius: 3px;
 }
 
 .box-photo {
@@ -354,17 +358,25 @@ p.credits {
 
 }
 
-.equipe {
+.equipe-photos {
     display: grid;
     grid-template-columns: 0.5fr 2fr;
-    gap: 15px;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.description {
+.equipe {
+    background-color: var(--var-name5);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, #5880a2 0px 8px 16px -8px;
+    display: flex;
+    align-items: center;
+}
+
+.description-accueil {
     margin: 20px 0;
     text-align:justify;
     color: #444544;
-    font-size: 8px;
+    font-size : clamp(0.5rem, 16px, 4rem);
 }
 
 .box {
@@ -553,3 +565,9 @@ p.credits {
     }
 
 }
+
+    /* breakpoint section accueil */
+    .texte-photo {
+        display : flex;
+        flex-direction: row-reverse;
+    }
