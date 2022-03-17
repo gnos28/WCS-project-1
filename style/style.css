@@ -220,7 +220,7 @@ p.credits {
   justify-content: space-around;
   margin: 1rem;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 @media (min-width: 575.98px) {
