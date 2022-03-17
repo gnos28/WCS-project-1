@@ -92,14 +92,25 @@ header > .container {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  gap: calc(0.1 * var(--header-height));
+  gap: calc(0.25 * var(--header-height));
   padding: 0 calc(0.1 * var(--header-height));
 }
 
+header > .container div {
+  flex-grow: 2;
+}
+
 header > .container h1 {
-  font-size: clamp(2rem, 7vw, 5.5rem);
-  line-height: 100%;
+  font-size: clamp(1.5rem, 6vw, 5.5rem);
+  /* line-height: 100%; */
   color: var(--var-name2);
+  text-align: center;
+}
+
+@media (min-width: 767.99px) {
+  header > .container h1 {
+    text-align: left;
+  }
 }
 
 header > .container img {
@@ -149,7 +160,6 @@ nav > ul > li {
   font-size: calc(0.07 * (100vh - var(--header-height)));
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  color:var(--var-name6);
   transform-origin: top left;
   transition: transform var(--burger-animation-speed) cubic-bezier(.04,.49,.45,1.42) var(--burger-animation-speed);
   transform: translateX(100vw);
@@ -158,6 +168,11 @@ nav > ul > li {
 nav > ul > li.liAnimationIn
 {
   transform: translateX(0);
+}
+
+nav > ul > li a{
+  text-decoration: none;
+  color:var(--var-name6);
 }
 
 .burgerShow {

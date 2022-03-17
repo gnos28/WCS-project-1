@@ -24,13 +24,15 @@ burgerMenu.addEventListener("click", (e) => {
           50*index
         );
       });
-    }, 400);
+    }, 100);
 
     burgerShow = true;
   } else {
-    nav.classList.remove("burgerShow");
-    main.classList.remove("blur");
     nav.classList.remove("burgerAnimationIn");
+    main.classList.remove("blur");
+    
+    let timer = window.setTimeout(() => {nav.classList.remove("burgerShow");}, 400)
+
     lis.forEach((li) => li.classList.remove("liAnimationIn"));
     burgerShow = false;
   }
