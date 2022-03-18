@@ -55,11 +55,11 @@
   padding: 0;
 }
 
-/* .square-team .container {
+.square-team .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 12px;
-} */
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -584,10 +584,10 @@ p.credits {
 
 @media (min-width: 767.98px) {
   /* breakpoints section square-team */
-  /* .square-team .container {
+  .square-team .container {
     width: 700px;
     padding-bottom: 120px;
-  } */
+  }
 
   .wrapper-team {
     position: relative;
