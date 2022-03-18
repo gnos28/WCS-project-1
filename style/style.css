@@ -418,7 +418,7 @@ p.credits {
 }
 
 .miniature {
-  display : none;
+  display: none;
 }
 
 .box {
@@ -617,11 +617,11 @@ p.credits {
     font-size: clamp(1rem, 20px, 4rem);
     display: flex;
     align-items: center;
-    padding-left: 30px
+    padding-left: 30px;
   }
 
   .accueil h2 {
-    margin: 20px
+    margin: 20px;
   }
 
   .equipe {
@@ -633,7 +633,7 @@ p.credits {
   }
 
   .team-members {
-    display:flex;
+    display: flex;
     justify-content: space-around;
     /* margin: 1rem; */
     flex-wrap: wrap;
@@ -641,7 +641,7 @@ p.credits {
   }
 
   .miniature {
-    display:block;
+    display: block;
     width: 125px;
     height: 125px;
     border-radius: 2px;
@@ -649,4 +649,3 @@ p.credits {
 
   /* fin breakpoint section accueil */
 }
-
