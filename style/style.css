@@ -399,17 +399,25 @@ p.credits {
   color: var(--var-name2);
 }
 
-/* .accueil .container {
+.accueil .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-} */
+}
 
-.accueil img {
+.image-accueil {
   padding: 20px 50px;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.container-chevron {
+  display: flex;
+  justify-content: center;
+  width: 67px;
+  height: 108px;
+  margin: auto;
 }
 
 .texte-photo {
@@ -767,19 +775,19 @@ p.credits {
     display: none;
   }
 
-  /* .members-photo-accueil {
+  .members-photo-accueil {
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
+    /* margin: 1rem;
     flex-wrap: row-wrap;
-    gap: 0.7rem;
+    gap: 0.7rem; */
   }
   
   .miniature {
     width: 125px;
     height: 125px;
     border-radius: 2px;
-  } */
+  }
 
   /* fin breakpoint section accueil */
 }
