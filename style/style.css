@@ -42,8 +42,9 @@
   --var-name4: #83a3be;
   --var-name5: #afc6d9;
   --var-name6: #dbe9f5;
+  --bg-color: #f2f5f7;
   --var-mainfont: #0f0f0f;
-  --header-height: 100px;
+  --header-height: 60px;
   --burger-animation-speed: 0.4s;
   --box-name: #252525;
 }
@@ -67,6 +68,7 @@ body {
   /* background-color: rgb(163, 163, 238); */
   position: relative;
   padding-top: var(--header-height); /* pour header en position fixed */
+  background-color: var(--bg-color);
 }
 
 h1 {
@@ -194,6 +196,10 @@ nav > ul > li a {
 .burgerAnimationOut {
   filter: opacity(0);
   /* transition: opacity 2s; */
+}
+
+.wrapper {
+  min-height: calc(100vh - 100px);
 }
 
 /* ------------ FIN MENU BURGER --------------- */
