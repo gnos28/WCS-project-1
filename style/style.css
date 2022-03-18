@@ -68,23 +68,13 @@ body {
   background-color: var(--bg-color);
   position: relative;
   padding-top: var(--header-height);
-  /* pour header en position fixed */
   background-color: var(--bg-color);
 }
 
 main {
   transition: filter var(--burger-animation-speed) ease-in-out
     calc(var(--burger-animation-speed) * 0.5);
-  /* height: calc(100vh - var(--header-height)); */
-  height: 100%;
-  /* position: absolute; */
   top: 0px;
-  /* padding-top: var(--header-height); */
-}
-
-.onepage-pagination {
-  background-color: pink;
-  height: 0;
 }
 
 main.blur {
@@ -92,15 +82,10 @@ main.blur {
 }
 
 section {
-  /* height: calc(100vh - var(--header-height)); */
-  height: 100%;
+  position: relative;
+  min-height: calc(100vh - var(--header-height));
+  /* min-height: calc(100vh - 75px); */
   width: 100%;
-}
-
-.container {
-  padding-top: 30px;
-  /* width: 100vw;
-  height: 100vh; */
 }
 
 /* ------------ CUSTOM SCROLLBAR --------------- */
@@ -130,10 +115,6 @@ h1 {
   color: var(--var-name2);
 }
 
-section {
-  height: calc(100vh - var(--header-height));
-}
-
 /* modif header & header > .container pour passer en position fixed */
 
 header {
@@ -161,7 +142,6 @@ header > .header-container div {
 
 header > .header-container h1 {
   font-size: clamp(1.2rem, 6vw, 5.5rem);
-  /* line-height: 100%; */
   color: var(--var-name2);
   text-align: center;
   user-select: none;
@@ -173,9 +153,7 @@ header > .header-container svg {
 }
 
 header > .header-container img {
-  /* display: block;
-    height: 90%; */
-  /* width: 50%; */
+  margin: 4px;
   height: calc(0.8 * var(--header-height));
   user-select: none;
 }
@@ -203,26 +181,25 @@ nav {
   height: calc(100vh - var(--header-height));
   width: 100vw;
   z-index: 1;
-  /* height:100%; */
 }
 
-nav>ul {
+nav > ul {
   margin-left: 1rem;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
-  /* overflow: hidden; */
 }
 
-nav>ul>li {
+nav > ul > li {
   display: block;
   font-size: calc(0.07 * (100vh - var(--header-height)));
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   transform-origin: top left;
-  transition: transform var(--burger-animation-speed) cubic-bezier(0.04, 0.49, 0.45, 1.42) var(--burger-animation-speed);
+  transition: transform var(--burger-animation-speed)
+    cubic-bezier(0.04, 0.49, 0.45, 1.42) var(--burger-animation-speed);
   transform: translateX(100vw);
 }
 
@@ -247,7 +224,7 @@ nav > ul > li.liAnimationIn {
   transform: translateX(0);
 }
 
-nav>ul>li a {
+nav > ul > li a {
   text-decoration: none;
   color: var(--var-name6);
 }
@@ -267,12 +244,19 @@ nav>ul>li a {
 
 .burgerAnimationOut {
   filter: opacity(0);
-  /* transition: opacity 2s; */
 }
 
 /* ------------ FIN MENU BURGER --------------- */
 
-footer>.container {
+.ancre {
+  width: 1px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.0001);
+  position: absolute;
+  top: calc(-1 * var(--header-height));
+}
+
+footer > .container {
   display: flex;
   flex-direction: column;
   height: 100px;
@@ -280,7 +264,7 @@ footer>.container {
   padding: 20px 35px;
 }
 
-footer>.container p {
+footer > .container p {
   color: var(--var-name5);
   font-size: 0.9rem;
 }
@@ -297,7 +281,7 @@ p.credits {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-} 
+}
 
 .about h1 {
   font-size: 3rem;
@@ -321,7 +305,7 @@ p.credits {
   border-radius: 2px;
 }
 
-.presentation>h2 {
+.presentation > h2 {
   padding-left: 1rem;
 }
 
@@ -383,7 +367,6 @@ p.credits {
 }
 
 @media (min-width: 575.98px) {
-
   /* présentation détaillée phone landscape */
   .about h1 {
     font-size: 4rem;
@@ -423,9 +406,11 @@ p.credits {
   }
 }
 
-@media (min-width: 767.99px) {}
+@media (min-width: 767.99px) {
+}
 
-@media (min-width: 911.99px) {}
+@media (min-width: 911.99px) {
+}
 
 .accueil h2 {
   padding: 10px;
@@ -434,12 +419,6 @@ p.credits {
   width: 100%;
   color: var(--var-name2);
 }
-
-/* .accueil .container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-} */
 
 .accueil img {
   padding: 20px 50px;
@@ -576,7 +555,6 @@ p.credits {
 }
 
 @media (min-width: 419.98px) {
-
   /* breakpoints section square-team */
   .square-team h2 {
     font-size: 2.2rem;
@@ -609,7 +587,6 @@ p.credits {
 }
 
 @media (min-width: 575.98px) {
-
   /* breakpoints section square-team */
   .box {
     width: 30%;
@@ -633,7 +610,6 @@ p.credits {
 }
 
 @media (min-width: 767.98px) {
-
   /* breakpoints section square-team */
   .square-team .container {
     width: 700px;
@@ -655,15 +631,15 @@ p.credits {
     margin: 0;
     border-radius: 3px;
     border: none;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   .box:hover {
     background-color: #ffffff;
     box-shadow: 5px 5px 14px -1px rgba(0, 0, 0, 0.39);
-    animation: bordered .1s ease-in-out .1s both;
-    transition: .1s;
-  } 
+    animation: bordered 0.1s ease-in-out 0.1s both;
+    transition: 0.1s;
+  }
 
   @keyframes bordered {
     from {
@@ -797,20 +773,6 @@ p.credits {
   .box-photo {
     display: none;
   }
-
-  /* .members-photo-accueil {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem;
-    flex-wrap: row-wrap;
-    gap: 0.7rem;
-  }
-  
-  .miniature {
-    width: 125px;
-    height: 125px;
-    border-radius: 2px;
-  } */
 
   /* fin breakpoint section accueil */
 }
