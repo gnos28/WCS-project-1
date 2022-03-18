@@ -67,7 +67,7 @@ body {
   color: var(--var-mainfont);
   background-color: var(--bg-color);
   position: relative;
-  padding-top: var(--header-height); /* pour header en position fixed */
+  padding-top: 30px; /* pour header en position fixed */
   background-color: var(--bg-color);
 }
 
@@ -168,8 +168,9 @@ header > .container h1 {
 
 header > .container img {
   /* display: block;
-    height: 90%; */
-  /* width: 50%; */
+    height: 90%; 
+  width: 90%;*/
+  margin: 4px;
   height: calc(0.8 * var(--header-height));
   user-select: none;
 }
@@ -273,6 +274,7 @@ footer > .container {
   height: 100px;
   background-color: var(--var-name2);
   padding: 20px 35px;
+  margin-top: 100px;
 }
 
 footer > .container p {
