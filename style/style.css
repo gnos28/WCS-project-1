@@ -558,6 +558,78 @@ p.credits {
     }
   }
 
+    .box {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        margin: 0;
+    }
+
+    .box-name h3 {
+        font-size: 1.3rem;
+        opacity: 0;
+    }
+
+    .box:hover h3 {
+        animation: fade-to .3s ease-out .2s both;
+    }
+
+    @keyframes fade-to {
+        from {
+            opacity: 0;
+            margin-top: -10px;
+        }
+
+        to {
+            opacity: 1;
+            margin-top: 5px;
+        }
+    }
+
+    .box-1 {
+        top: 0;
+        left: 0;
+    }
+
+    .box-2 {
+        top: 0;
+        right: 0;
+    }
+
+    .box-3 {
+        bottom: 0;
+        left: 0;
+    }
+
+    .box-4 {
+        bottom: 0;
+        right: 0;
+    }
+
+    .box-5 {
+        top: calc(50% - 125px);
+        left: calc(50% - 125px);
+    }
+
+    .box img {
+        width: 250px;
+        height: 250px;
+        margin: 0;   
+    }
+
+    img.img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 250px;
+    }
+
+    img.img-overlay:hover {
+        opacity: 0;
+        transition: .5s;
+    }
+
   .box-1 {
     top: 0;
     left: 0;
