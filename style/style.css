@@ -632,19 +632,24 @@ p.credits {
     display: none;
   }
 
-  .team-members {
+   /* .team-members {
     display: flex;
     justify-content: space-around;
-    /* margin: 1rem; */
+    margin: 1rem;
     flex-wrap: wrap;
-    /* gap: 0.7rem; */
-  }
+    gap: 0.7rem;
+  } */
 
-  .miniature {
+  /* .miniature {
     display: block;
     width: 125px;
     height: 125px;
     border-radius: 2px;
+  } */
+
+  .accueil img {
+    width: fit-content;
+    height: fit-content;
   }
 
   /* fin breakpoint section accueil */
