@@ -423,9 +423,11 @@ p.credits {
   font-size: clamp(1rem, 24px, 4rem);
   text-align: center;
   width: 100%;
-  color: var(--var-name2);
+  /* color: var(--var-name2); */
+  background: -webkit-linear-gradient(90deg, #dbe9f5 0%, #5880a2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 
 .accueil .container {
   width: 100%;
