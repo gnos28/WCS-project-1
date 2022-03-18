@@ -74,7 +74,7 @@ main {
   transition: filter var(--burger-animation-speed) ease-in-out
     calc(var(--burger-animation-speed) * 0.5);
   /* height: calc(100vh - var(--header-height)); */
-  height: 100vh;
+  height: 100%;
   /* position: absolute; */
   top:0px;
   /* padding-top: var(--header-height); */
@@ -100,8 +100,8 @@ section {
 .container
 {
   padding-top: var(--header-height);
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
 }
 
 /* ------------ CUSTOM SCROLLBAR --------------- */
