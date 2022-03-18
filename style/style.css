@@ -391,6 +391,12 @@ p.credits {
 @media (min-width: 911.99px) {
 }
 
+/* DEBUT ACCUEIL */
+
+/* .accueil {
+  margin-bottom: 50px;
+} */
+
 .accueil h2 {
   padding: 10px;
   font-size: clamp(1rem, 24px, 4rem);
@@ -401,7 +407,7 @@ p.credits {
 
 .accueil .container {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   padding: 0 15px;
 }
 
@@ -420,10 +426,19 @@ p.credits {
   margin: auto;
 }
 
+.container-chevron img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 50px;
+}
+
 .texte-photo {
   display: flex;
   flex-direction: column;
 }
+
+/* FIN ACCUEIL */
+
 .square-team {
   padding: 30px 0 45px;
 }
