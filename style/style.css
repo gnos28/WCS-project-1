@@ -77,12 +77,11 @@ main {
   /* height: calc(100vh - var(--header-height)); */
   height: 100%;
   /* position: absolute; */
-  top:0px;
+  top: 0px;
   /* padding-top: var(--header-height); */
 }
 
-.onepage-pagination
-{
+.onepage-pagination {
   background-color: pink;
   height: 0;
 }
@@ -95,12 +94,10 @@ section {
   /* height: calc(100vh - var(--header-height)); */
   height: 100%;
   width: 100%;
-  
 }
 
-.container
-{
-  padding-top: var(--header-height);
+.container {
+  padding-top: 30px;
   /* width: 100vw;
   height: 100vh; */
 }
@@ -557,12 +554,12 @@ p.credits {
 }
 
 .description-accueil {
-  margin: 20px 0;
+  margin: 20px 20px;
   text-align: justify;
   color: #444544;
 }
 
-.team-members {
+.members-photo-accueil {
   display: none;
 }
 
@@ -622,77 +619,77 @@ p.credits {
     }
   }
 
-    .box {
-        position: absolute;
-        width: 250px;
-        height: 250px;
-        margin: 0;
+  .box {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    margin: 0;
+  }
+
+  .box-name h3 {
+    font-size: 1.3rem;
+    opacity: 0;
+  }
+
+  .box:hover h3 {
+    animation: fade-to 0.3s ease-out 0.2s both;
+  }
+
+  @keyframes fade-to {
+    from {
+      opacity: 0;
+      margin-top: -10px;
     }
 
-    .box-name h3 {
-        font-size: 1.3rem;
-        opacity: 0;
+    to {
+      opacity: 1;
+      margin-top: 5px;
     }
+  }
 
-    .box:hover h3 {
-        animation: fade-to .3s ease-out .2s both;
-    }
+  .box-1 {
+    top: 0;
+    left: 0;
+  }
 
-    @keyframes fade-to {
-        from {
-            opacity: 0;
-            margin-top: -10px;
-        }
+  .box-2 {
+    top: 0;
+    right: 0;
+  }
 
-        to {
-            opacity: 1;
-            margin-top: 5px;
-        }
-    }
+  .box-3 {
+    bottom: 0;
+    left: 0;
+  }
 
-    .box-1 {
-        top: 0;
-        left: 0;
-    }
+  .box-4 {
+    bottom: 0;
+    right: 0;
+  }
 
-    .box-2 {
-        top: 0;
-        right: 0;
-    }
+  .box-5 {
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+  }
 
-    .box-3 {
-        bottom: 0;
-        left: 0;
-    }
+  .box img {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+  }
 
-    .box-4 {
-        bottom: 0;
-        right: 0;
-    }
+  img.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+  }
 
-    .box-5 {
-        top: calc(50% - 125px);
-        left: calc(50% - 125px);
-    }
-
-    .box img {
-        width: 250px;
-        height: 250px;
-        margin: 0;   
-    }
-
-    img.img-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 250px;
-        height: 250px;
-    }
-
-    img.img-overlay:hover {
-        opacity: 0;
-        transition: .5s;
-    }
+  img.img-overlay:hover {
+    opacity: 0;
+    transition: 0.5s;
+  }
 
   .box-1 {
     top: 0;
@@ -764,19 +761,18 @@ p.credits {
     display: none;
   }
 
-  .team-members {
+  /* .members-photo-accueil {
     display: flex;
-    justify-content: space-around;
-    /* margin: 1rem; */
-    flex-wrap: wrap;
-    /* gap: 0.7rem; */
+    justify-content: space-between;
+    margin: 1rem;
+    flex-wrap: row-wrap;
+    gap: 0.7rem;
   }
-
+  
   .miniature {
-    display: block;
     width: 125px;
     height: 125px;
     border-radius: 2px;
-  }
+  } */
 
   /* fin breakpoint section accueil */
