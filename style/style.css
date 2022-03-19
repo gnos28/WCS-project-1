@@ -309,6 +309,17 @@ p.credits {
   padding-left: 1rem;
 }
 
+.presentation-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation-picto {
+  padding: 1rem;
+  border: 2px solid black;
+  margin: 1rem;
+}
+
 .presentation-text {
   margin: 1rem auto;
   padding: 0.5rem;
