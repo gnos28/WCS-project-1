@@ -455,3 +455,27 @@ customElements.define('custom-burger', CustomBurger)
 
 // ********************* FIN CUSTOM BURGER CLASS *********************
 
+const titleDiv = document.querySelector('header > .header-container > div')
+const titleH1 = document.querySelector('header > .header-container > div > h1')
+
+const title = titleH1.innerText
+const rawWords = title.split(" ")
+const words = rawWords.map(word => [...word])
+
+titleDiv.removeChild(titleH1)
+
+words.forEach(word => {
+  const wordDiv = document.createElement('div')
+
+  word.forEach(letter => {
+    const letterDiv = document.createElement('div')
+    const subLetterDiv = document.createElement('div')
+    subLetterDiv.innerText = letter
+    letterDiv.appendChild(subLetterDiv)
+    wordDiv.appendChild(letterDiv)
+  })
+
+  titleDiv.appendChild(wordDiv)
+})
+
+console.log(words)

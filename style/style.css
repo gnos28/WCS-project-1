@@ -45,6 +45,7 @@
   --bg-color: #f2f5f7;
   --var-mainfont: #0f0f0f;
   --header-height: clamp(50px, 10vw, 100px);
+  --title-font-size : clamp(1.2rem, 5.5vw, 5.5rem);
   --burger-animation-speed: 0.4s;
   --box-name: #252525;
 }
@@ -136,16 +137,71 @@ header > .header-container {
   padding: 0 calc(0.1 * var(--header-height));
 }
 
-header > .header-container div {
+header > .header-container > div {
   flex-grow: 2;
 }
 
-header > .header-container h1 {
-  font-size: clamp(1.2rem, 6vw, 5.5rem);
-  color: var(--var-name2);
-  text-align: center;
+header > .header-container > .main-title {
   user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  /* gap: 0 calc(var(--title-font-size) * 0.2); */
 }
+
+/* word */
+.main-title > div{
+  display: block;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.main-title > div:not(:first-child)
+{
+  margin-left: calc(var(--title-font-size) * 0.4);
+}
+
+/* letter container */
+.main-title > div > div{
+  display: inline-block;
+  flex-grow: 0;
+  height: calc(var(--title-font-size) * 0.8);
+  width: calc(var(--title-font-size) * 0.8);
+  padding-left: calc(var(--title-font-size) * 0.1);
+  /* border: 1px solid red; */
+  position: relative;
+  /* background-color: teal; */
+}
+
+.main-title > div > div:before{
+  content:"";
+  position: absolute;
+  top:calc(var(--title-font-size) * -0.05);
+  left:calc(var(--title-font-size) * -0.1);
+  height: calc(var(--title-font-size) * 1.0);
+  width: calc(var(--title-font-size) * 1.0);
+  /* border: 2px solid green; */
+  background-color: var(--var-name2);
+  transform: scale(0);
+  transition: all 0.2s;
+}
+
+.main-title > div > div:hover:before{
+  transform: scale(1);
+}
+
+/* letter */
+.main-title > div > div > div{
+  position: absolute;
+  top:calc(var(--title-font-size) * -0.2);
+  color: var(--var-name2);
+  font-family: 'Square One', sans-serif;
+  font-weight: bold;
+  font-size: var(--title-font-size);
+  /* border: 1px solid blue; */
+}
+
 
 header > .header-container svg {
   height: calc(0.8 * var(--header-height));
@@ -163,8 +219,8 @@ header > .header-container img.burger-icon {
 }
 
 @media (min-width: 767.99px) {
-  header > .header-container h1 {
-    text-align: left;
+  header > .header-container > .main-title {
+    justify-content: flex-start;
   }
   header > .header-container #burger-menu {
     display: none;
