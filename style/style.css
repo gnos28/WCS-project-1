@@ -123,7 +123,7 @@ header {
   background-color: var(--var-name6);
   z-index: 100;
   width: 100%;
-  box-shadow: #587fa28c 0px 5px 15px;
+  box-shadow: #587fa28c 0px 2px 6px;
 }
 
 header > .header-container {
