@@ -384,6 +384,10 @@ p.credits {
     color: var(--var-name1);
   }
 
+  .detailed-presentation > h2 {
+    font-size: 1.8rem;
+  }
+
   /* breakpoints section square-team */
   .box {
     width: 30%;
@@ -584,12 +588,6 @@ p.credits {
   .box h3 {
     font-size: 1.1rem;
   }
-
-  /* présentation détaillée mobile */ 
-
-  .detailed-presentation > h2 {
-    font-size: 1.1rem;
-  }
 }
 
 @media (min-width: 575.98px) {
@@ -783,10 +781,10 @@ p.credits {
   /* fin breakpoint section accueil */
 }
 
-/* changement pour présentation détaillée à voir avec tout le monde */ 
+/* changement pour présentation détaillée à voir avec tout le monde */
 
-@media (min-width: 374.98px) {
+@media (min-width: 374.98px) and (max-width: 500.98px) {
   .detailed-presentation > h2 {
     font-size: 1rem;
   }
-}
+} 
