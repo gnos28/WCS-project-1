@@ -481,9 +481,10 @@ words.forEach((word) => {
       subLetterDiv.innerText = letter
       letterDiv.appendChild(subLetterDiv)
       wordDiv.appendChild(letterDiv)
-    }, delay * 50)
+    }, delay * 140)
 
-    delay += letterIndex + 1
+    delay++
+    console.log("delay", delay)
   })
 
   titleDiv.appendChild(wordDiv)
