@@ -50,6 +50,8 @@ liLinks.forEach((link) =>
   })
 )
 
+nav.addEventListener('click', (e) => hideBurgerMenu())
+
 // CUSTOM BURGER CLASS
 
 let strToDom = (str) =>
@@ -131,6 +133,17 @@ class CustomBurger extends HTMLElement {
     svg.addEventListener('click', (e) => {
       this.animateBurger(burgerShow)
     })
+
+    nav.addEventListener('click', (e) => {
+      this.animateBurger(!burgerShow)
+    })
+
+    liLinks.forEach((link) =>
+      link.addEventListener('click', (e) => {
+        this.animateBurger(!burgerShow)
+      })
+    )
+
     shadow.appendChild(style)
     shadow.appendChild(svg)
   }
@@ -310,7 +323,7 @@ class CustomBurger extends HTMLElement {
         val2start,
         val2end,
         val3start,
-        val3end,
+        val3end
       )
 
       return `M41.3,${val2} c2,1.1,5.2,1.1,7.1,0
@@ -348,7 +361,7 @@ class CustomBurger extends HTMLElement {
         val3start,
         val3end,
         val4start,
-        val4end,
+        val4end
       )
 
       return `M${val1},${val2} c0-2.3-1.6-5.1-3.6-6.2
@@ -386,7 +399,7 @@ class CustomBurger extends HTMLElement {
         val3start,
         val3end,
         val4start,
-        val4end,
+        val4end
       )
 
       return `M${val1},${val2} c-2,1.1-3.6,3.9-3.6,6.2
