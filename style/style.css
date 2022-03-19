@@ -287,25 +287,25 @@ p.credits {
   font-size: 3rem;
 }
 
-.presentation {
+.detailed-presentation {
   display: flex;
   justify-content: space-around;
   margin-top: 1rem;
 }
 
 .easy-photo {
-  width: 125px;
-  height: 125px;
+  width: 15%;
+  height: auto;
   border-radius: 2px;
 }
 
 .team-photo {
-  width: 125px;
-  height: 125px;
+  width: 18%;
+  height: auto;
   border-radius: 2px;
 }
 
-.presentation > h2 {
+.detailed-presentation > h2 {
   padding-left: 1rem;
 }
 
@@ -330,7 +330,7 @@ p.credits {
   display: flex;
   justify-content: space-around;
   margin: 1rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 0.7rem;
 }
 
@@ -584,6 +584,12 @@ p.credits {
   .box h3 {
     font-size: 1.1rem;
   }
+
+  /* présentation détaillée mobile */ 
+
+  .detailed-presentation > h2 {
+    font-size: 1.1rem;
+  }
 }
 
 @media (min-width: 575.98px) {
@@ -775,4 +781,12 @@ p.credits {
   }
 
   /* fin breakpoint section accueil */
+}
+
+/* changement pour présentation détaillée à voir avec tout le monde */ 
+
+@media (min-width: 374.98px) {
+  .detailed-presentation > h2 {
+    font-size: 1rem;
+  }
 }
