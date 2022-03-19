@@ -52,7 +52,7 @@ liLinks.forEach((link) =>
 
 nav.addEventListener('click', (e) => hideBurgerMenu())
 
-// CUSTOM BURGER CLASS
+// ********************* DEBUT CUSTOM BURGER CLASS *********************
 
 let strToDom = (str) =>
   document.createRange().createContextualFragment(str).firstChild
@@ -452,3 +452,6 @@ class CustomBurger extends HTMLElement {
 }
 
 customElements.define('custom-burger', CustomBurger)
+
+// ********************* FIN CUSTOM BURGER CLASS *********************
+
