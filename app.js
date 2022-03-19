@@ -459,20 +459,31 @@ const titleDiv = document.querySelector('header > .header-container > div')
 const titleH1 = document.querySelector('header > .header-container > div > h1')
 
 const title = titleH1.innerText
-const rawWords = title.split(" ")
-const words = rawWords.map(word => [...word])
+const rawWords = title.split(' ')
+const words = rawWords.map((word) => [...word])
 
 titleDiv.removeChild(titleH1)
 
-words.forEach(word => {
+let delay = 0
+
+words.forEach((word) => {
   const wordDiv = document.createElement('div')
 
-  word.forEach(letter => {
-    const letterDiv = document.createElement('div')
-    const subLetterDiv = document.createElement('div')
-    subLetterDiv.innerText = letter
-    letterDiv.appendChild(subLetterDiv)
-    wordDiv.appendChild(letterDiv)
+  word.forEach((letter, letterIndex) => {
+    let subTimer = window.setTimeout(() => {
+      const letterDiv = document.createElement('div')
+      letterDiv.classList.add('intro')
+      let subTimer = window.setTimeout(
+        () => letterDiv.classList.remove('intro'),
+        10
+      )
+      const subLetterDiv = document.createElement('div')
+      subLetterDiv.innerText = letter
+      letterDiv.appendChild(subLetterDiv)
+      wordDiv.appendChild(letterDiv)
+    }, delay * 50)
+
+    delay += letterIndex + 1
   })
 
   titleDiv.appendChild(wordDiv)

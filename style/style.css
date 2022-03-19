@@ -187,6 +187,10 @@ header > .header-container > .main-title {
   transition: all 0.2s;
 }
 
+.main-title > div > div.intro:before{
+  transform: scale(1);
+}
+
 .main-title > div > div:hover:before{
   transform: scale(1);
 }
