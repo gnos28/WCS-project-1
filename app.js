@@ -159,6 +159,34 @@ class CustomBurger extends HTMLElement {
     } else return ''
   }
 
+  calcVal(
+    reverse,
+    time,
+    val1start = 0,
+    val1end = 0,
+    val2start = 0,
+    val2end = 0,
+    val3start = 0,
+    val3end = 0,
+    val4start = 0,
+    val4end = 0
+  ) {
+    const val1 = !reverse
+      ? val1end - time * (val1end - val1start)
+      : val1start + time * (val1end - val1start)
+    const val2 = !reverse
+      ? val2end - time * (val2end - val2start)
+      : val2start + time * (val2end - val2start)
+    const val3 = !reverse
+      ? val3end - time * (val3end - val3start)
+      : val3start + time * (val3end - val3start)
+    const val4 = !reverse
+      ? val4end - time * (val4end - val4start)
+      : val4start + time * (val4end - val4start)
+
+    return [val1, val2, val3, val4]
+  }
+
   burgerPath1_draw(time, reverse) {
     if ((time > 0.5 && !reverse) || (time < 0.5 && reverse)) {
       return ``
@@ -175,18 +203,18 @@ class CustomBurger extends HTMLElement {
       if (!reverse) time = time * 2
       else time = (time - 0.5) * 2
 
-      const val1 = !reverse
-        ? val1end - time * (val1end - val1start)
-        : val1start + time * (val1end - val1start)
-      const val2 = !reverse
-        ? val2end - time * (val2end - val2start)
-        : val2start + time * (val2end - val2start)
-      const val3 = !reverse
-        ? val3end - time * (val3end - val3start)
-        : val3start + time * (val3end - val3start)
-      const val4 = !reverse
-        ? val4end - time * (val4end - val4start)
-        : val4start + time * (val4end - val4start)
+      const [val1, val2, val3, val4] = this.calcVal(
+        reverse,
+        time,
+        val1start,
+        val1end,
+        val2start,
+        val2end,
+        val3start,
+        val3end,
+        val4start,
+        val4end
+      )
 
       return `M${val1},${val2} ${val3},${val4}`
     }
@@ -209,18 +237,18 @@ class CustomBurger extends HTMLElement {
       if (!reverse) time = time * 2
       else time = (time - 0.5) * 2
 
-      const val1 = !reverse
-        ? val1end - time * (val1end - val1start)
-        : val1start + time * (val1end - val1start)
-      const val2 = !reverse
-        ? val2end - time * (val2end - val2start)
-        : val2start + time * (val2end - val2start)
-      const val3 = !reverse
-        ? val3end - time * (val3end - val3start)
-        : val3start + time * (val3end - val3start)
-      const val4 = !reverse
-        ? val4end - time * (val4end - val4start)
-        : val4start + time * (val4end - val4start)
+      const [val1, val2, val3, val4] = this.calcVal(
+        reverse,
+        time,
+        val1start,
+        val1end,
+        val2start,
+        val2end,
+        val3start,
+        val3end,
+        val4start,
+        val4end
+      )
 
       return `M${val1},${val2} ${val3},${val4}`
     }
@@ -243,18 +271,18 @@ class CustomBurger extends HTMLElement {
       if (!reverse) time = time * 2
       else time = (time - 0.5) * 2
 
-      const val1 = !reverse
-        ? val1end - time * (val1end - val1start)
-        : val1start + time * (val1end - val1start)
-      const val2 = !reverse
-        ? val2end - time * (val2end - val2start)
-        : val2start + time * (val2end - val2start)
-      const val3 = !reverse
-        ? val3end - time * (val3end - val3start)
-        : val3start + time * (val3end - val3start)
-      const val4 = !reverse
-        ? val4end - time * (val4end - val4start)
-        : val4start + time * (val4end - val4start)
+      const [val1, val2, val3, val4] = this.calcVal(
+        reverse,
+        time,
+        val1start,
+        val1end,
+        val2start,
+        val2end,
+        val3start,
+        val3end,
+        val4start,
+        val4end
+      )
 
       return `M${val1},${val2} ${val3},${val4}`
     }
@@ -274,15 +302,16 @@ class CustomBurger extends HTMLElement {
       if (reverse) time = time * 2
       else time = (time - 0.5) * 2
 
-      const val1 = reverse
-        ? val1end - time * (val1end - val1start)
-        : val1start + time * (val1end - val1start)
-      const val2 = reverse
-        ? val2end - time * (val2end - val2start)
-        : val2start + time * (val2end - val2start)
-      const val3 = reverse
-        ? val3end - time * (val3end - val3start)
-        : val3start + time * (val3end - val3start)
+      const [val1, val2, val3, val4] = this.calcVal(
+        !reverse,
+        time,
+        val1start,
+        val1end,
+        val2start,
+        val2end,
+        val3start,
+        val3end,
+      )
 
       return `M41.3,${val2} c2,1.1,5.2,1.1,7.1,0
     l35.9 ${val3} c2-1.1,2-3,0-4.1
@@ -309,18 +338,18 @@ class CustomBurger extends HTMLElement {
       if (reverse) time = time * 2
       else time = (time - 0.5) * 2
 
-      const val1 = reverse
-        ? val1end - time * (val1end - val1start)
-        : val1start + time * (val1end - val1start)
-      const val2 = reverse
-        ? val2end - time * (val2end - val2start)
-        : val2start + time * (val2end - val2start)
-      const val3 = reverse
-        ? val3end - time * (val3end - val3start)
-        : val3start + time * (val3end - val3start)
-      const val4 = reverse
-        ? val4end - time * (val4end - val4start)
-        : val4start + time * (val4end - val4start)
+      const [val1, val2, val3, val4] = this.calcVal(
+        !reverse,
+        time,
+        val1start,
+        val1end,
+        val2start,
+        val2end,
+        val3start,
+        val3end,
+        val4start,
+        val4end,
+      )
 
       return `M${val1},${val2} c0-2.3-1.6-5.1-3.6-6.2
     L4.2,28.8 c-2-1.1-3.6-0.2-3.6,2.1
@@ -347,18 +376,18 @@ class CustomBurger extends HTMLElement {
       if (reverse) time = time * 2
       else time = (time - 0.5) * 2
 
-      const val1 = reverse
-        ? val1end - time * (val1end - val1start)
-        : val1start + time * (val1end - val1start)
-      const val2 = reverse
-        ? val2end - time * (val2end - val2start)
-        : val2start + time * (val2end - val2start)
-      const val3 = reverse
-        ? val3end - time * (val3end - val3start)
-        : val3start + time * (val3end - val3start)
-      const val4 = reverse
-        ? val4end - time * (val4end - val4start)
-        : val4start + time * (val4end - val4start)
+      const [val1, val2, val3, val4] = this.calcVal(
+        !reverse,
+        time,
+        val1start,
+        val1end,
+        val2start,
+        val2end,
+        val3start,
+        val3end,
+        val4start,
+        val4end,
+      )
 
       return `M${val1},${val2} c-2,1.1-3.6,3.9-3.6,6.2
     L46.5,97.2 c0,2.3,1.6,3.2,3.6,2.1
