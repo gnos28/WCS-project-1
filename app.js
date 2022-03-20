@@ -52,12 +52,3 @@ liLinks.forEach((link) =>
 
 
 
-// animations section square-team
-
-const imgOverlay = document.querySelectorAll('box');
-
-
-imgOverlay.addEventListener('mouseover', function () {
-  console.log('hello');
-  // element.classList.add('box-hover ');
-});
