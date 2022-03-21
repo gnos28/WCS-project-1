@@ -491,31 +491,69 @@ words.forEach((word) => {
 
 // ********************* DEBUT INTERSECTION OBSERVER *********************
 
-
 // chopper largeur viewport
 let viewWidth = window.innerWidth
+let baseSquareSize = Math.floor(window.innerWidth * 0.055)
 
-const addReveal = () => {
+const addReveal = (firstLoad = false) => {
   const reveals = document.querySelectorAll('.reveal')
 
   reveals.forEach((reveal) => {
-    console.log("*************", reveal)
-    console.log("jquery height()",$(reveal).height())
-    console.log("jquery outerHeight()",$(reveal).outerHeight())
-    console.log("reveal.clientHeight",reveal.clientHeight)
-    console.log("reveal.scrollHeight",reveal.scrollHeight)
-    console.log("reveal.offsetHeight",reveal.offsetHeight)
-    console.log("reveal.getBoundingClientRect()",reveal.getBoundingClientRect())
-    console.log("getComputedStyle(reveal).height",getComputedStyle(reveal).height)
-    console.log("getComputedStyle(reveal).webkitLogicalHeight", getComputedStyle(reveal).webkitLogicalHeight)
-    console.log("-+-+-", reveal.getClientRects())
+    // console.log("*************", reveal)
+    // console.log("jquery height()",$(reveal).height())
+    // console.log("jquery outerHeight()",$(reveal).outerHeight())
+    // console.log("reveal.clientHeight",reveal.clientHeight)
+    // console.log("reveal.scrollHeight",reveal.scrollHeight)
+    // console.log("reveal.getBoundingClientRect()",reveal.getBoundingClientRect())
+    // console.log("getComputedStyle(reveal).height",getComputedStyle(reveal).height)
+    // console.log("getComputedStyle(reveal).webkitLogicalHeight", getComputedStyle(reveal).webkitLogicalHeight)
+    // console.log("-+-+-", reveal.getClientRects())
+
+    const elementWidth = $(reveal).width() //reveal.offsetWidth
+    const elementHeight = $(reveal).height() //reveal.offsetHeight
+    if (firstLoad) reveal.isLoaded = false
+    else {
+      // effacer précedentes div children
+      reveal.querySelectorAll('.reveal-block').forEach(element => element.remove())
+    }
+
+    let nbSquareWidth = Math.ceil(elementWidth / baseSquareSize)
+    let nbSquareHeight = Math.ceil(elementHeight / baseSquareSize)
+    console.log("elementHeight / baseSquareSize", elementHeight / baseSquareSize)
+
+    const moduloSquareWidth = elementWidth % nbSquareWidth
+    const moduloSquareHeight = elementHeight % nbSquareHeight
+
+    let finalSquareWidth = elementWidth / nbSquareWidth
+    let finalSquareHeight = elementHeight / nbSquareHeight
+    if(finalSquareWidth>finalSquareHeight)
+    {
+      finalSquareWidth = finalSquareHeight
+      nbSquareWidth = elementWidth / finalSquareWidth
+    }
+    else
+    {
+      finalSquareHeight = finalSquareWidth
+      nbSquareHeight = elementHeight / finalSquareHeight
+    }
+
+    for (let i = 0; i <= nbSquareWidth; i++)
+      for (let j = 0; j <= nbSquareHeight; j++) {
+        const tinySquare = document.createElement('div')
+        tinySquare.classList.add('reveal-block')
+        tinySquare.style.height = finalSquareHeight + 'px'
+        tinySquare.style.width = finalSquareWidth + 'px'
+        tinySquare.style.top = j * finalSquareHeight + 'px'
+        tinySquare.style.left = i * finalSquareWidth + 'px'
+        reveal.appendChild(tinySquare)
+      }
   })
 }
 
-$(document).ready(
-  window.setTimeout(addReveal, 1000)
-  )
+window.addEventListener('resize', (e) => {
+  viewWidth = window.innerWidth
+  baseSquareSize = Math.floor(window.innerWidth * 0.055)
+  addReveal()
+})
 
-  
-// $(document).ready(addReveal)
-//addReveal()
+$(document).ready(addReveal(true))

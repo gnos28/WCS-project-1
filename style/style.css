@@ -100,19 +100,30 @@ section {
   display: block;
 }
 
+.reveal-block{
+  position: absolute;
+  display: block;
+  background-color: var(--var-name2);
+  z-index: 99;
+  border: 1px solid red;
+  filter: opacity(0.5);
+  animation: revealer 1s both ease-in-out;
+}
+
 @keyframes revealer {
   0%{
     filter: opacity(1);
   }
   99%{
-    filter: opacity(0);
-    transform: scale(1);
+    filter: opacity(1);
+    
+    transform: perspective(50px) skew(-45deg, -45deg);
   }
   100%{
-    transform: scale(0.0001);
+    filter: opacity(0);
   }
 }
-
+/* 
 .reveal:before{
   content:"";
   position: absolute;
@@ -124,7 +135,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
-}
+} */
 
 /* à utiliser avec Intersection Observer */
 
