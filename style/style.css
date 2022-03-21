@@ -62,6 +62,10 @@
   padding: 0 12px;
 }
 
+html, body{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -88,6 +92,41 @@ section {
   /* min-height: calc(100vh - 75px); */
   width: 100%;
 }
+
+/* à utiliser avec Intersection Observer */
+
+.reveal{
+  position: relative;
+  display: block;
+}
+
+@keyframes revealer {
+  0%{
+    filter: opacity(1);
+  }
+  99%{
+    filter: opacity(0);
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(0.0001);
+  }
+}
+
+.reveal:before{
+  content:"";
+  position: absolute;
+  background-color: var(--var-name2);
+  filter: opacity(0.5);
+  animation: revealer 5s both ease-in-out;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* à utiliser avec Intersection Observer */
 
 /* ------------ CUSTOM SCROLLBAR --------------- */
 

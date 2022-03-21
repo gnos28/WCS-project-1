@@ -484,7 +484,6 @@ words.forEach((word) => {
     }, delay * 140)
 
     delay++
-    console.log("delay", delay)
   })
 
   titleDiv.appendChild(wordDiv)
