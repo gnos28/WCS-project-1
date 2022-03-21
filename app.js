@@ -489,4 +489,33 @@ words.forEach((word) => {
   titleDiv.appendChild(wordDiv)
 })
 
-console.log(words)
+// ********************* DEBUT INTERSECTION OBSERVER *********************
+
+
+// chopper largeur viewport
+let viewWidth = window.innerWidth
+
+const addReveal = () => {
+  const reveals = document.querySelectorAll('.reveal')
+
+  reveals.forEach((reveal) => {
+    console.log("*************", reveal)
+    console.log("jquery height()",$(reveal).height())
+    console.log("jquery outerHeight()",$(reveal).outerHeight())
+    console.log("reveal.clientHeight",reveal.clientHeight)
+    console.log("reveal.scrollHeight",reveal.scrollHeight)
+    console.log("reveal.offsetHeight",reveal.offsetHeight)
+    console.log("reveal.getBoundingClientRect()",reveal.getBoundingClientRect())
+    console.log("getComputedStyle(reveal).height",getComputedStyle(reveal).height)
+    console.log("getComputedStyle(reveal).webkitLogicalHeight", getComputedStyle(reveal).webkitLogicalHeight)
+    console.log("-+-+-", reveal.getClientRects())
+  })
+}
+
+$(document).ready(
+  window.setTimeout(addReveal, 1000)
+  )
+
+  
+// $(document).ready(addReveal)
+//addReveal()
