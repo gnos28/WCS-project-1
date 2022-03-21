@@ -754,9 +754,10 @@ p.credits {
   .box:hover {
     background-color: #ffffff;
     box-shadow: 5px 5px 14px -1px rgba(0, 0, 0, 0.39);
-    animation: bordered 0.1s ease-in-out 0.1s both;
-    transition: 0.1s;
-  }
+    animation: bordered .1s ease-in-out .1s both;
+    z-index: 98;
+    transition: .1s;
+  } 
 
   @keyframes bordered {
     from {
@@ -764,13 +765,13 @@ p.credits {
     }
 
     to {
-      border: 1px solid rgba(36, 36, 36);
+      border: 1px solid rgba(158, 158, 158, 0.658);
     }
   }
 
-  .box:hover.box img {
+  /* .box:hover.box img {
     box-shadow: 0px 0px 10px 0px rgb(34, 34, 34);
-  }
+  } */
 
   .box-name h3 {
     font-size: 1.2rem;
@@ -862,7 +863,7 @@ p.credits {
 
   img.img-overlay:hover {
     opacity: 0;
-    transition: 0.5s;
+    transition: .5s;
   }
 
   /* breakpoint section accueil */
