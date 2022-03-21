@@ -386,51 +386,54 @@ p.credits {
   font-size: 3rem;
 }
 
-.presentation {
+.detailed-presentation {
   display: flex;
   justify-content: space-around;
   margin-top: 1rem;
 }
 
-.easy-photo {
-  width: 125px;
-  height: 125px;
+.detailed-presentation > .easy-photo {
+  width: 18%;
+  height: auto;
   border-radius: 2px;
 }
 
 .team-photo {
-  width: 125px;
-  height: 125px;
+  width: 18%;
+  height: auto;
   border-radius: 2px;
 }
 
-.presentation > h2 {
+.detailed-presentation > h2 {
   padding-left: 1rem;
+}
+
+.presentation-column {
+  display: flex;
+  flex-direction: column;;
+}
+
+.presentation-picto {
+  padding: 1rem;
+  border: 2px solid black;
+  margin: 1rem;
+  width: 75%;
 }
 
 .presentation-text {
   margin: 1rem auto;
   padding: 0.5rem;
   width: 99%;
-  height: 200px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  height: auto;
   color: var(--var-name1);
   box-shadow: #5880a2 0px 5px 15px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.presentation-text::-webkit-scrollbar {
-  display: none;
+  border-radius: 2px;
 }
 
 .team-going {
   display: flex;
   justify-content: space-around;
   margin: 1rem;
-  flex-wrap: wrap;
-  gap: 0.7rem;
 }
 
 @media (min-width: 419.98px) {
@@ -483,6 +486,10 @@ p.credits {
     color: var(--var-name1);
   }
 
+  .detailed-presentation > h2 {
+    font-size: 1.8rem;
+  }
+
   /* breakpoints section square-team */
   .box {
     width: 30%;
@@ -509,6 +516,17 @@ p.credits {
 }
 
 @media (min-width: 911.99px) {
+
+  /* présentation détaillée desktop */
+
+  .presentation-column > h2 { 
+    margin: 1rem auto;
+    padding: 0.5rem;
+    width: 100%; 
+    box-shadow: #5880a2 0px 5px 15px;
+    color: var(--var-name1);
+    border-radius: 2px;
+  }
 }
 
 .accueil h2 {
@@ -875,3 +893,11 @@ p.credits {
 
   /* fin breakpoint section accueil */
 }
+
+/* changement pour présentation détaillée à voir avec tout le monde */
+
+@media (min-width: 374.98px) and (max-width: 500.98px) {
+  .presentation-column > h2 {
+    font-size: 1rem;
+  }
+} 
