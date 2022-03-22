@@ -495,8 +495,11 @@ words.forEach((word) => {
 let viewWidth = window.innerWidth
 let baseSquareSize = Math.floor(window.innerWidth * 0.055)
 
-const addReveal = (firstLoad = false) => {
+const addReveal = (firstLoad = false) => { // création des quadrillages
   const reveals = document.querySelectorAll('.reveal')
+  let observer
+  if(firstLoad)
+    observer = new IntersectionObserver(handleIntersect, options)
 
   reveals.forEach((reveal) => {
     // console.log("*************", reveal)
@@ -509,44 +512,97 @@ const addReveal = (firstLoad = false) => {
     // console.log("getComputedStyle(reveal).webkitLogicalHeight", getComputedStyle(reveal).webkitLogicalHeight)
     // console.log("-+-+-", reveal.getClientRects())
 
-    const elementWidth = $(reveal).width() //reveal.offsetWidth
-    const elementHeight = $(reveal).height() //reveal.offsetHeight
     if (firstLoad) reveal.isLoaded = false
+    // à passer à true une fois l'animation jouée
     else {
       // effacer précedentes div children
-      reveal.querySelectorAll('.reveal-block').forEach(element => element.remove())
+      reveal
+        .querySelectorAll('.reveal-block')
+        .forEach((element) => element.remove())
     }
 
-    let nbSquareWidth = Math.ceil(elementWidth / baseSquareSize)
-    let nbSquareHeight = Math.ceil(elementHeight / baseSquareSize)
-    console.log("elementHeight / baseSquareSize", elementHeight / baseSquareSize)
+    if (!reveal.isLoaded) {
+      const elementWidth = $(reveal).width() //reveal.offsetWidth
+      const elementHeight = $(reveal).height() //reveal.offsetHeight
 
-    const moduloSquareWidth = elementWidth % nbSquareWidth
-    const moduloSquareHeight = elementHeight % nbSquareHeight
+      let nbSquareWidth = Math.ceil(elementWidth / baseSquareSize)
+      let nbSquareHeight = Math.ceil(elementHeight / baseSquareSize)
+      console.log(
+        'elementHeight / baseSquareSize',
+        elementHeight / baseSquareSize
+      )
 
-    let finalSquareWidth = elementWidth / nbSquareWidth
-    let finalSquareHeight = elementHeight / nbSquareHeight
-    if(finalSquareWidth>finalSquareHeight)
-    {
-      finalSquareWidth = finalSquareHeight
-      nbSquareWidth = elementWidth / finalSquareWidth
-    }
-    else
-    {
-      finalSquareHeight = finalSquareWidth
-      nbSquareHeight = elementHeight / finalSquareHeight
-    }
+      const moduloSquareWidth = elementWidth % nbSquareWidth
+      const moduloSquareHeight = elementHeight % nbSquareHeight
 
-    for (let i = 0; i <= nbSquareWidth; i++)
-      for (let j = 0; j <= nbSquareHeight; j++) {
-        const tinySquare = document.createElement('div')
-        tinySquare.classList.add('reveal-block')
-        tinySquare.style.height = finalSquareHeight + 'px'
-        tinySquare.style.width = finalSquareWidth + 'px'
-        tinySquare.style.top = j * finalSquareHeight + 'px'
-        tinySquare.style.left = i * finalSquareWidth + 'px'
-        reveal.appendChild(tinySquare)
+      let finalSquareWidth = elementWidth / nbSquareWidth
+      let finalSquareHeight = elementHeight / nbSquareHeight
+      if (finalSquareWidth > finalSquareHeight) {
+        finalSquareWidth = finalSquareHeight
+        nbSquareWidth = elementWidth / finalSquareWidth
+      } else {
+        finalSquareHeight = finalSquareWidth
+        nbSquareHeight = elementHeight / finalSquareHeight
       }
+
+      reveal.tinySquares = []
+
+      for (let i = 0; i <= nbSquareHeight; i++) {
+        const tinyRow = []
+        for (let j = 0; j <= nbSquareWidth; j++) {
+          const tinySquare = document.createElement('div')
+          tinySquare.classList.add('reveal-block')
+          tinySquare.style.height = finalSquareHeight + 'px'
+          tinySquare.style.width = finalSquareWidth + 'px'
+          tinySquare.style.top = i * finalSquareHeight + 'px'
+          tinySquare.style.left = j * finalSquareWidth + 'px'
+          reveal.appendChild(tinySquare)
+          tinyRow.push(tinySquare)
+        }
+        reveal.tinySquares.push(tinyRow)
+        console.log("boloss",reveal.tinySquares)
+      }
+    }
+    observer.observe(reveal)
+  })
+}
+
+const threshold = .1
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold:0.5
+}
+
+const handleIntersect = function (reveals, observer) {
+  reveals.forEach(function (reveal) {
+    if (reveal.intersectionRatio > threshold) {
+
+      const xLength = reveal.target.tinySquares.length
+      const yLength = reveal.target.tinySquares[0].length
+
+      const totalLength = xLength + yLength
+      console.log("reveal.target.tinySquares", reveal.target.tinySquares)
+      console.log("totalLength",totalLength)
+
+      for(let i=0;i<totalLength;i++)
+      {
+        console.log("i", i)
+        for(let x=i;x>=0;x--)
+        {
+          console.log(x, i-x)
+          
+          //if(reveal.target.tinySquares[x][i-x] !== undefined)
+          
+          if(x < reveal.target.tinySquares.length && i-x<reveal.target.tinySquares[0].length)
+            window.setTimeout(() => reveal.target.tinySquares[x][i-x].classList.add("reveal-animate"), i*100)
+            
+            
+        }
+      }
+
+      // observer.unobserve(reveal.target)
+    }
   })
 }
 
