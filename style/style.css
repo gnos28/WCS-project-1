@@ -387,8 +387,6 @@ p.credits {
 }
 
 .detailed-presentation {
-  display: flex;
-  justify-content: space-around;
   margin-top: 1rem;
 }
 
@@ -399,32 +397,42 @@ p.credits {
 }
 
 .team-photo {
-  width: 17%;
+  width: 22%;
   height: auto;
   border-radius: 2px;
 }
 
-.presentation-column > h2 {
-  padding-left: 1rem;
-  color: var(--var-name2);
-  letter-spacing: 0.1rem;
+.detailed-presentation {
+  text-align: center; 
 }
 
-h2 > span {
+.detailed-presentation > h2 {
   font-family: 'Square One', sans-serif;
+  letter-spacing: 0.1rem;
+  color: var(--var-name2);
+  font-size: 1.4rem;
 }
 
-.presentation-column {
-  display: flex;
-  flex-direction: column;
-  margin-left: 1rem;
+.detailed-presentation > h3 {
+  font-size: 15px;
+  color: var(--var-name2);
 }
 
 .presentation-picto {
   padding: 1rem;
-  margin: 1rem;
+  margin: 0 auto;
   width: 75%;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.presentation-picto > img {
+  width: 35px;
+  height: 35px;
+}
+
+.easy-photo {
+  max-width: 100%;
 }
 
 .presentation-text {
@@ -433,10 +441,10 @@ h2 > span {
   width: 99%;
   height: auto;
   color: var(--var-name1);
-  box-shadow: #5880a2 0px 2px 3px;
   border-radius: 2px;
   -ms-overflow-style: none; 
   scrollbar-width: none;
+  font-size: 1em;;
 }
 
 .presentation-text::-webkit-scrollbar {
@@ -445,8 +453,8 @@ h2 > span {
 
 .team-going {
   display: flex;
-  justify-content: space-around;
-  margin: 1rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 419.98px) {
@@ -479,18 +487,23 @@ h2 > span {
   .box h3 {
     font-size: 1.1rem;
   }
+
+  /* présentation détaillée mobile */ 
+
+  .profile-picto {
+    display: flex; 
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .presentation-picto {
+    flex-direction: column; 
+    width: initial;
+  }
 }
 
 @media (min-width: 575.98px) {
   /* présentation détaillée phone landscape */
-  .about h1 {
-    font-size: 4rem;
-  }
-
-  .easy-photo {
-    width: 150px;
-    height: 150px;
-  }
 
   .presentation-text {
     width: 95%;
@@ -499,13 +512,25 @@ h2 > span {
     color: var(--var-name1);
   }
 
-  .presentation-column > h2 {
-    font-size: 1.8rem;
-    color: var(--var-name2)
+  .profile-picto {
+    width: 80%;
   }
 
-  h2 > span {
-    font-family: 'Square One', sans-serif;
+  .presentation-picto {
+    justify-content: space-around;
+  }
+
+  .presentation-picto > img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .detailed-presentation > h2 {
+    font-size: 1.9rem;
+  }
+
+  .detailed-presentation > h3 {
+    font-size: 1.5rem;
   }
 
   /* breakpoints section square-team */
@@ -531,25 +556,14 @@ h2 > span {
 }
 
 @media (min-width: 767.99px) {
-}
+
+  /* presentation détaillée */
+
+  .detailed-presentation {
+    display: flex;
+  }
 
 @media (min-width: 911.99px) {
-
-  /* présentation détaillée desktop */
-
-  .presentation-column > h2 { 
-    margin: 1rem auto;
-    padding: 0.5rem;
-    width: 100%; 
-    box-shadow: #5880a2 0px 2px 3px;
-    border-radius: 2px;
-    color: var(--var-name2);
-  }
-
-  h2 > span {
-    font-family: 'Square One', sans-serif;
-  }
-}
 
 /* ----------DEBUT ACCUEIL----------- */
 
