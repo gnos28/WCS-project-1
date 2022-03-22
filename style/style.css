@@ -393,31 +393,38 @@ p.credits {
 }
 
 .detailed-presentation > .easy-photo {
-  width: 18%;
+  width: 17%;
   height: auto;
   border-radius: 2px;
 }
 
 .team-photo {
-  width: 18%;
+  width: 17%;
   height: auto;
   border-radius: 2px;
 }
 
-.detailed-presentation > h2 {
+.presentation-column > h2 {
   padding-left: 1rem;
+  color: var(--var-name2);
+  letter-spacing: 0.1rem;
+}
+
+h2 > span {
+  font-family: 'Square One', sans-serif;
 }
 
 .presentation-column {
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
+  margin-left: 1rem;
 }
 
 .presentation-picto {
   padding: 1rem;
-  border: 2px solid black;
   margin: 1rem;
   width: 75%;
+  text-align: center;
 }
 
 .presentation-text {
@@ -426,8 +433,14 @@ p.credits {
   width: 99%;
   height: auto;
   color: var(--var-name1);
-  box-shadow: #5880a2 0px 5px 15px;
+  box-shadow: #5880a2 0px 2px 3px;
   border-radius: 2px;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+
+.presentation-text::-webkit-scrollbar {
+  display: none;
 }
 
 .team-going {
@@ -486,8 +499,13 @@ p.credits {
     color: var(--var-name1);
   }
 
-  .detailed-presentation > h2 {
+  .presentation-column > h2 {
     font-size: 1.8rem;
+    color: var(--var-name2)
+  }
+
+  h2 > span {
+    font-family: 'Square One', sans-serif;
   }
 
   /* breakpoints section square-team */
@@ -523,9 +541,13 @@ p.credits {
     margin: 1rem auto;
     padding: 0.5rem;
     width: 100%; 
-    box-shadow: #5880a2 0px 5px 15px;
-    color: var(--var-name1);
+    box-shadow: #5880a2 0px 2px 3px;
     border-radius: 2px;
+    color: var(--var-name2);
+  }
+
+  h2 > span {
+    font-family: 'Square One', sans-serif;
   }
 }
 
@@ -944,5 +966,6 @@ p.credits {
 @media (min-width: 374.98px) and (max-width: 500.98px) {
   .presentation-column > h2 {
     font-size: 1rem;
+    font-family: 'Square One', sans-serif;
   }
 } 
