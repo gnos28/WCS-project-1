@@ -347,6 +347,11 @@ nav > ul > li a {
 
 /* ------------ FIN MENU BURGER --------------- */
 
+.presentation-picto-desktop
+{
+  display: none;
+}
+
 .ancre {
   width: 1px;
   height: 1px;
@@ -406,14 +411,14 @@ p.credits {
   text-align: center; 
 }
 
-.detailed-presentation > h2 {
+.detailed-presentation h2 {
   font-family: 'Square One', sans-serif;
   letter-spacing: 0.1rem;
   color: var(--var-name2);
   font-size: 1.4rem;
 }
 
-.detailed-presentation > h3 {
+.detailed-presentation h3 {
   font-size: 15px;
   color: var(--var-name2);
 }
@@ -497,8 +502,8 @@ p.credits {
   }
 
   .presentation-picto {
-    flex-direction: column; 
     width: initial;
+    flex-direction: column;
   }
 }
 
@@ -525,11 +530,11 @@ p.credits {
     height: 45px;
   }
 
-  .detailed-presentation > h2 {
+  .detailed-presentation h2 {
     font-size: 1.9rem;
   }
 
-  .detailed-presentation > h3 {
+  .detailed-presentation h3 {
     font-size: 1.5rem;
   }
 
@@ -563,7 +568,22 @@ p.credits {
     display: flex;
   }
 
+  /* .detailed-presentation h2 {
+    order: 3;
+  }
+
+  .detailed-presentation h3 {
+    order: 2;
+  } */
+  
+  .flex-title {
+    display: flex; 
+    flex-direction: column;
+    order: 3;
+  }
+}
 @media (min-width: 911.99px) {
+}
 
 /* ----------DEBUT ACCUEIL----------- */
 
@@ -606,6 +626,7 @@ p.credits {
 .container-chevron img {
   width: 80px;
   height: 80px;
+  position: absolute;
 }
 
 .texte-photo {
