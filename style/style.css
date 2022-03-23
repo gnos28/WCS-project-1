@@ -423,7 +423,7 @@ nav > ul > li a {
 
 /************************* HEADER FIN *************************/
 
-/************************* ACCEUIL DEBUT *************************/
+/************************* ACCUEIL DEBUT *************************/
 
 /* .accueil {
   margin-bottom: 50px;
@@ -444,25 +444,25 @@ nav > ul > li a {
   padding: 0 15px;
 } */
 
-.image-accueil {
-  padding: 20px 50px;
-  width: 100%;
-  height: 400px;
-  /* display: flex;
-  justify-content: center; */
+.child1 {
   background-image: url('../img/img-cube.png');
   background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.child2 {
+  padding: 20px 30px;
+  width: 100%;
+  height: fit-content;
+  text-align: justify;
+  color: #444544;
+  font-size: calc(0.7*var(--title-font-size));
 }
 
 .texte-photo {
   display: flex;
   flex-direction: column;
-}
-
-.description-accueil {
-  margin: 20px 20px;
-  text-align: justify;
-  color: #444544;
 }
 
 .members-photo-accueil {
@@ -476,46 +476,19 @@ nav > ul > li a {
 /* breakpoint section accueil */
 @media (min-width: 767.98px) {
   .parent {
-    position: relative;
+    display:flex;
+    flex-direction: row-reverse;
     height: 100%;
+    padding: 2rem 0;
   }
 
-  /* .texte-photo {
-    display: flex;
-    flex-direction: row-reverse;
-  } */
   .child1 { /* image */
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.7;
-    background-image: url("../img/img-cube.png");
-    background-size: cover;
-    border-radius: 2px;
+    height: auto;
   }
   .child2 {
-    z-index: 1;
-    
-    background: white;
-    padding: 2rem;
     text-align: justify;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-  }
-
-  /* .child2:hover {
-    animation: myAnim 1s ease 0s 1 normal forwards;
-  } */
-
-  @keyframes myAnim {
-    0% {
-      transform: translateY(0);
-    }
-
-    100% {
-      transform: translateY(100px);
-    }
+    color: #444544;
+    font-size: calc(0.25*var(--title-font-size));
   }
 
   .texte-photo img {
@@ -547,15 +520,21 @@ nav > ul > li a {
 
   .miniature {
     display: block;
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     border-radius: 2px;
+    box-shadow: 5px 5px 14px -1px rgb(0 0 0 / 39%);
+
+  }
+  
+  .accueil h2 {
+    padding-bottom: 4rem
   }
 
   /* fin breakpoint section accueil */
 }
 
-/************************* ACCEUIL FIN *************************/
+/************************* ACCUEIL FIN *************************/
 
 /************************* TEAM DEBUT *************************/
 
