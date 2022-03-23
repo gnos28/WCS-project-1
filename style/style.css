@@ -520,9 +520,11 @@ nav > ul > li a {
 
   .miniature {
     display: block;
-    width: 125px;
-    height: 125px;
+    width: 150px;
+    height: 150px;
     border-radius: 2px;
+    box-shadow: 5px 5px 14px -1px rgb(0 0 0 / 39%);
+
   }
   
   .accueil h2 {
