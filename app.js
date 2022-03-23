@@ -593,9 +593,9 @@ presentationTable.forEach((person, personIndex) => {
      if (i != personIndex)
      {
        const aTeamGoing = document.createElement("a")
-       ateamGoing.href = "#"+presentationTable[i].id
+       aTeamGoing.href = "#"+presentationTable[i].id
        const imgTeamGoing = document.createElement("img")
-       imgTeamGoing.src = presentationTable[i].(`${profilePictureUrl}`)
+       imgTeamGoing.src = presentationTable[i].profilePictureUrl
        imgTeamGoing.alt = presentationTable[i].firstName
        imgTeamGoing.classList.add('team-photo')
 
@@ -707,7 +707,7 @@ presentationTable.forEach((person, personIndex) => {
 
   container.appendChild(teamGoing);
 
-  main.appendChild(section);
+  main.appendChild(section); // penser à rajouter les chevrons
         
 })
 
