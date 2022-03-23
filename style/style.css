@@ -111,7 +111,7 @@ section {
 
 .reveal-animate{
   transform-origin: center;
-  animation: revealer 3s both ease-in-out;
+  animation: revealer 0.4s both ease-in-out;
 }
 
 @keyframes revealer {
@@ -121,14 +121,14 @@ section {
   33%{
     filter: opacity(1);
     
-    transform: perspective(500px) rotate3d(1,-1,0,90deg);
+    transform: perspective(500px) rotate3d(1,-1,0,-45deg) translate(0,0,1.5);
   }
   66%{
-    transform: perspective(500px) rotate3d(1,-1,0,0deg) scale(1.5);
-    filter: opacity(1);
+    transform: perspective(500px) rotate3d(1,-1,0,0deg) translate(-100%,-100%,1.5);
+    
   }
   100%{
-    transform: perspective(500px) rotate3d(1,-1,0,0deg) translate(-200%, -200%);
+    transform: perspective(500px) rotate3d(1,-1,0,90deg) translate(-200%, -200%);
     filter: opacity(0);
   }
 }
