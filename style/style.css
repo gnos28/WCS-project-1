@@ -924,9 +924,9 @@ p.credits {
 }
 .child2 {
     z-index: 1;
-    margin: 40px;
+    margin: 40px 0;
     background: white;
-    padding: 55px;
+    padding: 40px;
     text-align: justify;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
@@ -942,7 +942,7 @@ p.credits {
   }
 
   100% {
-    transform: translateY(100px);
+    transform: translateY(200px);
   }
 }
 
