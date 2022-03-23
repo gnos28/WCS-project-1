@@ -568,7 +568,11 @@ p.credits {
 } */
 
 .accueil h2 {
-  margin-top: 20px;
+  padding: 10px;
+  font-size: clamp(1rem, 24px, 4rem);
+  text-align: center;
+  width: 100%;
+  color: var(--var-name2);
 }
 
 .accueil .container {
@@ -578,10 +582,13 @@ p.credits {
 }
 
 .image-accueil {
-  padding: 20px 50px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  /* padding: 20px 50px; */
+  width: 400px;
+  height: 400px;
+  /* display: flex;
+  justify-content: center; */
+  background-image: url("img/imgcube.png");
+  /* background-size: cover; */
 }
 
 .container-chevron {
@@ -952,6 +959,13 @@ p.credits {
     width: 125px;
     height: 125px;
     border-radius: 2px;
+  }
+
+
+  .container-chevron img:hover {
+    -webkit-transform:scale(1.25);
+    -ms-transform: scale(1.25);
+    transform: scale(1.25);
   }
 
   /* fin breakpoint section accueil */
