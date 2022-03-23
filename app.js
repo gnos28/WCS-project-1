@@ -490,3 +490,20 @@ words.forEach((word) => {
 })
 
 console.log(words)
+
+
+// Animations box-img
+const imgOverlay = document.querySelectorAll('.img-overlay');
+const boxImg = document.querySelectorAll('.box');
+
+imgOverlay.forEach((img, index) => {
+  img.addEventListener('mouseover', function () {
+    boxImg[index].classList.add('box-hover');
+
+  })
+  img.addEventListener('mouseleave', function () {
+    boxImg[index].classList.remove('box-hover');
+  })
+})
+
+
