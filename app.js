@@ -595,7 +595,7 @@ presentationTable.forEach((person, personIndex) => {
        const aTeamGoing = document.createElement("a")
        ateamGoing.href = "#"+presentationTable[i].id
        const imgTeamGoing = document.createElement("img")
-       imgTeamGoing.src = presentationTable[i].profilePictureUrl
+       imgTeamGoing.src = presentationTable[i].(`${profilePictureUrl}`)
        imgTeamGoing.alt = presentationTable[i].firstName
        imgTeamGoing.classList.add('team-photo')
 
