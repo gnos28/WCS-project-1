@@ -584,7 +584,26 @@ const presentationTable = [
   },
 ]
 
-presentationTable.forEach(person => {
+presentationTable.forEach((person, personIndex) => {
+  const teamGoing = document.createElement("div"); 
+  teamGoing.classList.add("team-going");
+  teamGoing.classList.add("reveal-light-hidden")
+
+  for (let i = 0; i < presentationTable.length; i++) {
+     if (i != personIndex)
+     {
+       const aTeamGoing = document.createElement("a")
+       ateamGoing.href = "#"+presentationTable[i].id
+       const imgTeamGoing = document.createElement("img")
+       imgTeamGoing.src = presentationTable[i].profilePictureUrl
+       imgTeamGoing.alt = presentationTable[i].firstName
+       imgTeamGoing.classList.add('team-photo')
+
+       aTeamGoing.appendChild(imgTeamGoing)
+
+       teamGoing.appendChild(aTeamGoing)
+     }
+  }
 
   const section = document.createElement("section"); 
   section.classList.add("about");
@@ -686,26 +705,9 @@ presentationTable.forEach(person => {
 
   container.appendChild(presText);
 
-  main.appendChild(section);
+  container.appendChild(teamGoing);
 
-/* <div class="team-going reveal-light-hidden">
-            <a href="#antho"
-              ><img
-                src="img/anthony.png"
-                alt="anthony"
-                class="team-photo"
-            /></a>
-            <a href="#emma"
-              ><img src="img/emma.png" alt="emma" class="team-photo"/></a>
-            <a href="#julien"
-              ><img
-                src="img/julien.png"
-                alt="julien"
-                class="team-photo"
-            /></a>
-            <a href="#lora"
-              ><img src="img/lora.png" alt="lora" class="team-photo"/></a>
-          </div> */
+  main.appendChild(section);
         
 })
 
