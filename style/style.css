@@ -56,8 +56,14 @@
   padding: 0;
 }
 
-.square-team .container {
+.container {
   width: 100%;
+  max-width: 1200px;
+  padding-bottom: 80px;
+}
+
+.square-team .container {
+  width: 700px;
   margin: 0 auto;
   padding: 0 12px;
 }
@@ -347,11 +353,6 @@ nav > ul > li a {
 
 /* ------------ FIN MENU BURGER --------------- */
 
-.presentation-picto-desktop
-{
-  display: none;
-}
-
 .ancre {
   width: 1px;
   height: 1px;
@@ -360,7 +361,7 @@ nav > ul > li a {
   top: calc(-1 * var(--header-height));
 }
 
-footer > .container {
+footer {
   display: flex;
   flex-direction: column;
   height: 100px;
@@ -368,7 +369,7 @@ footer > .container {
   padding: 20px 35px;
 }
 
-footer > .container p {
+footer > p {
   color: var(--var-name5);
   font-size: 0.9rem;
 }
@@ -415,11 +416,11 @@ p.credits {
   font-family: 'Square One', sans-serif;
   letter-spacing: 0.1rem;
   color: var(--var-name2);
-  font-size: 1.4rem;
+  font-size: calc(0.7 * var(--title-font-size));
 }
 
 .detailed-presentation h3 {
-  font-size: 15px;
+  font-size: calc(0.5 * var(--title-font-size));
   color: var(--var-name2);
 }
 
@@ -498,7 +499,7 @@ p.credits {
   .profile-picto {
     display: flex; 
     margin: 0 auto;
-    width: 100%;
+    /* width: 100%; */
   }
 
   .presentation-picto {
@@ -529,10 +530,10 @@ p.credits {
     width: 45px;
     height: 45px;
   }
-
+/* 
   .detailed-presentation h2 {
     font-size: 1.9rem;
-  }
+  } */
 
   .detailed-presentation h3 {
     font-size: 1.5rem;
@@ -560,12 +561,19 @@ p.credits {
   }
 }
 
+
+.presentation-picto-desktop
+{
+  display: none;
+}
+
 @media (min-width: 767.99px) {
 
   /* presentation détaillée */
 
   .detailed-presentation {
     display: flex;
+    justify-content: center;
   }
 
   /* .detailed-presentation h2 {
@@ -577,9 +585,36 @@ p.credits {
   } */
   
   .flex-title {
+    margin-left:2rem;
     display: flex; 
     flex-direction: column;
     order: 3;
+    flex-grow: 3;
+    width:auto;
+    align-items: flex-start;
+    gap:1rem;
+  }
+
+  .presentation-picto-mobile {
+    display: none;
+  }
+
+  .presentation-picto-desktop {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:3rem;
+    padding:0;
+  }
+
+  /* .presentation-img {
+    width: 30%;
+  } */
+
+  .profile-picto {
+    margin:0;
+    max-width: 25%;
   }
 }
 @media (min-width: 911.99px) {
@@ -632,6 +667,10 @@ p.credits {
 .texte-photo {
   display: flex;
   flex-direction: column;
+}
+
+.team-going img {
+  max-width:250px;
 }
 
 /* ------------FIN ACCUEIL----------- */
@@ -998,9 +1037,8 @@ p.credits {
 
 /* changement pour présentation détaillée à voir avec tout le monde */
 
-@media (min-width: 374.98px) and (max-width: 500.98px) {
-  .presentation-column > h2 {
-    font-size: 1rem;
-    font-family: 'Square One', sans-serif;
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
   }
-} 
+}
