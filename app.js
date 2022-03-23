@@ -515,7 +515,7 @@ const presentationTable = [
     facebookLink: "",
     linkedinLink: "",
     twitterLink: "",
-    profilePictureUrl: "img/ant.png",
+    profilePictureUrl: "img/anthony.png",
     presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
     magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
     assumenda accusantium corporis mollitia nisi necessitatibus
@@ -548,10 +548,7 @@ const presentationTable = [
     linkedinLink: "https://www.linkedin.com/in/julienvigneron/",
     twitterLink: "",
     profilePictureUrl: "img/julien.png",
-    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
-    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
-    assumenda accusantium corporis mollitia nisi necessitatibus
-    obcaecati accusamus. Obcaecati`,
+    presentationText: "Fort de 10 années d'expérience au sein d'un service ressources humaines, je suis a même de comprendre vos problèmatiques, analyser vos processus et être force de proposition pour fluidifier votre gestion administrative.<br><br>L'expérience utilisateur et la satisfaction client sont mes priorités.<br><br>Mon ambition sur 2022 est d'élargir mon champ de compétences autour du javascript en acquérant la maitrise des frameworks react / react native et de la plateforme backend NodeJS afin de vous proposer à terme un écosystème digital complet (administration + visibilité + mobilité) et parfaitement adapté à vos besoins.",
   },
   
   {
@@ -563,7 +560,7 @@ const presentationTable = [
     facebookLink: "",
     linkedinLink: "",
     twitterLink: "",
-    profilePictureUrl: "img/alexandre.png",
+    profilePictureUrl: "img/lora.png",
     presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
     magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
     assumenda accusantium corporis mollitia nisi necessitatibus
@@ -575,9 +572,9 @@ const presentationTable = [
     lastName: "PILLIAS",
     id: "alex", 
     jobTitle: "Étudiant développeur full-stack JS",
-    githubLink: "",
+    githubLink: "https://github.com/kaitolight",
     facebookLink: "",
-    linkedinLink: "",
+    linkedinLink: "https://www.linkedin.com/in/alexandre-pillias-ab3415234/",
     twitterLink: "",
     profilePictureUrl: "img/alexandre.png",
     presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
@@ -632,11 +629,14 @@ presentationTable.forEach(person => {
 
   pictList.forEach(picto => { 
     const pictoLink = document.createElement("a"); 
-    pictoLink.href = picto.socialLink;
+    if(picto.socialLink.length)
+      pictoLink.href = picto.socialLink;
     const alt = picto.imgUrl.split("/")[1].split(".")[0]
     const pictoImg = document.createElement("img"); 
     pictoImg.src = picto.imgUrl
     pictoImg.alt = alt
+    if(!picto.socialLink.length)
+      pictoImg.classList.add("noSocialNetwork")
     pictoLink.appendChild(pictoImg);
     
     pictoContainerDesktop.appendChild(pictoLink);
@@ -662,7 +662,7 @@ presentationTable.forEach(person => {
   const presText = document.createElement("div"); 
   presText.classList.add("presentation-text"); 
   presText.classList.add("reveal");
-  presText.innerText = person.presentationText; 
+  presText.innerHTML = person.presentationText; 
 
   // const teamGoing =
 
