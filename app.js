@@ -498,6 +498,7 @@ let baseSquareSize = Math.floor(window.innerWidth * 0.055)
 const addReveal = (firstLoad = false) => {
   // création des quadrillages
   const reveals = document.querySelectorAll('.reveal')
+  const revealLight = document.querySelectorAll('.reveal-light-hidden')
   let observer
   if (firstLoad) observer = new IntersectionObserver(handleIntersect, options)
 
@@ -565,6 +566,10 @@ const addReveal = (firstLoad = false) => {
     }
     observer.observe(reveal)
   })
+
+  revealLight.forEach((reveal) => {
+    observer.observe(reveal)
+  })
 }
 
 const threshold = 0.1
@@ -577,31 +582,39 @@ const options = {
 const handleIntersect = function (reveals, observer) {
   reveals.forEach(function (reveal) {
     if (reveal.intersectionRatio > threshold) {
-      const xLength = reveal.target.tinySquares.length
-      const yLength = reveal.target.tinySquares[0].length
+      // console.log([...reveal.target.classList])
+      if ([...reveal.target.classList].includes('reveal-light-hidden')) {
+        reveal.target.classList.remove('reveal-light-hidden')
+        reveal.target.classList.add('reveal-light')
+      } else {
+        const xLength = reveal.target.tinySquares.length
+        const yLength = reveal.target.tinySquares[0].length
 
-      const totalLength = xLength + yLength
-      // console.log("reveal.target.tinySquares", reveal.target.tinySquares)
-      // console.log("totalLength",totalLength)
+        const totalLength = xLength + yLength
+        // console.log("reveal.target.tinySquares", reveal.target.tinySquares)
+        // console.log("totalLength",totalLength)
 
-      for (let i = 0; i < totalLength; i++) {
-        // console.log("i", i)
-        for (let x = i; x >= 0; x--) {
-          // console.log(x, i-x)
+        for (let i = 0; i < totalLength; i++) {
+          // console.log("i", i)
+          for (let x = i; x >= 0; x--) {
+            // console.log(x, i-x)
 
-          //if(reveal.target.tinySquares[x][i-x] !== undefined)
+            //if(reveal.target.tinySquares[x][i-x] !== undefined)
 
-          if (
-            x < reveal.target.tinySquares.length &&
-            i - x < reveal.target.tinySquares[0].length
-          )
-            window.setTimeout(() => {
-              reveal.target.tinySquares[x][i - x].classList.add(
-                'reveal-animate'
-              )
-              window.setTimeout(() => reveal.target.tinySquares[x][i - x].remove()
-              , 1000)
-            }, i * 100)
+            if (
+              x < reveal.target.tinySquares.length &&
+              i - x < reveal.target.tinySquares[0].length
+            )
+              window.setTimeout(() => {
+                reveal.target.tinySquares[x][i - x].classList.add(
+                  'reveal-animate'
+                )
+                window.setTimeout(
+                  () => reveal.target.tinySquares[x][i - x].remove(),
+                  1000
+                )
+              }, i * 100)
+          }
         }
       }
 
@@ -617,21 +630,17 @@ window.addEventListener('resize', (e) => {
 })
 
 $(document).ready(addReveal(true))
-console.log(words)
-
+//console.log(words)
 
 // Animations box-img
-const imgOverlay = document.querySelectorAll('.img-overlay');
-const boxImg = document.querySelectorAll('.box');
+const imgOverlay = document.querySelectorAll('.img-overlay')
+const boxImg = document.querySelectorAll('.box')
 
 imgOverlay.forEach((img, index) => {
   img.addEventListener('mouseover', function () {
-    boxImg[index].classList.add('box-hover');
-
+    boxImg[index].classList.add('box-hover')
   })
   img.addEventListener('mouseleave', function () {
-    boxImg[index].classList.remove('box-hover');
+    boxImg[index].classList.remove('box-hover')
   })
 })
-
-
