@@ -577,10 +577,7 @@ const presentationTable = [
     linkedinLink: 'https://www.linkedin.com/in/alexandre-pillias-ab3415234/',
     twitterLink: '',
     profilePictureUrl: 'img/alexandre.png',
-    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
-    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
-    assumenda accusantium corporis mollitia nisi necessitatibus
-    obcaecati accusamus. Obcaecati`,
+    presentationText: "Ayant eu une brève expérience avec le HTML et CSS étant plus jeune, j'ai choisis de faire cette formation pour consolider mes acquis dans ces derniers et découvrir un tout nouveau langage qu'est le Javascript.<br><br>J'ai eu la chance de faire une licence d'anglais et d'être en totale immersion pendant 8 mois en Angleterre, je suis à même à comprendre et parler l'anglais couramment.<br><br>J'ai pour ambition d'élargir mes champs de compétences et d'obtenir l'expérience professionnelle qui me manque. Mon projet final est de m'installer à l'étranger, dans un pays anglophone, et y faire ma vie.",
   },
 ]
 
