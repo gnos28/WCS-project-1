@@ -504,79 +504,76 @@ imgOverlay.forEach((img, index) => {
 
 // ********************* DEBUT DOM PRESENTATION DETAILLEE *********************
 
-
 const presentationTable = [
   {
-    firstName: "ANTHONY", 
-    lastName: "AUBERT",
-    id: "antho", 
-    jobTitle: "Étudiant développeur full-stack JS",
-    githubLink: "",
-    facebookLink: "",
-    linkedinLink: "",
-    twitterLink: "",
-    profilePictureUrl: "img/anthony.png",
+    firstName: 'ANTHONY',
+    lastName: 'AUBERT',
+    id: 'antho',
+    jobTitle: 'Étudiant développeur full-stack JS',
+    githubLink: '',
+    facebookLink: '',
+    linkedinLink: '',
+    twitterLink: '',
+    profilePictureUrl: 'img/anthony.png',
+    presentationText: `Passionné par le web et curieux des nouvelles technologies, je suis sorti diplômé de la formation Designer Web du CEFIM en 2018.<br>Lors de ma dernière expérience professionnelle, j'ai effectué plusieurs travaux d'intégration de sites web et je souhaite désormais acquérir des compétences en développement web autour du Javascript (ReactJS / NodeJs).<br>Mon projet est d'intégrer une agence qui me permettrait de dgagner en expérience et d'enrichir mes connaissances puis me lancer en freelance.`,
+  },
+
+  {
+    firstName: 'EMMA',
+    lastName: 'BIGNON',
+    id: 'emma',
+    jobTitle: 'Étudiante développeuse full-stack JS',
+    githubLink: '',
+    facebookLink: '',
+    linkedinLink: '',
+    twitterLink: '',
+    profilePictureUrl: 'img/emma.png',
     presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
     magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
     assumenda accusantium corporis mollitia nisi necessitatibus
     obcaecati accusamus. Obcaecati`,
   },
-  
+
   {
-    firstName: "EMMA", 
-    lastName: "BIGNON",
-    id: "emma", 
-    jobTitle: "Étudiante développeuse full-stack JS",
-    githubLink: "",
-    facebookLink: "",
-    linkedinLink: "",
-    twitterLink: "",
-    profilePictureUrl: "img/emma.png",
+    firstName: 'JULIEN',
+    lastName: 'VIGNERON',
+    id: 'julien',
+    jobTitle: 'Étudiant développeur full-stack JS',
+    githubLink: 'https://github.com/gnos28',
+    facebookLink: 'https://www.facebook.com/gnos28/',
+    linkedinLink: 'https://www.linkedin.com/in/julienvigneron/',
+    twitterLink: '',
+    profilePictureUrl: 'img/julien.png',
+    presentationText:
+      "Fort de 10 années d'expérience au sein d'un service ressources humaines, je suis a même de comprendre vos problèmatiques, analyser vos processus et être force de proposition pour fluidifier votre gestion administrative.<br><br>L'expérience utilisateur et la satisfaction client sont mes priorités.<br><br>Mon ambition sur 2022 est d'élargir mon champ de compétences autour du javascript en acquérant la maitrise des frameworks react / react native et de la plateforme backend NodeJS afin de vous proposer à terme un écosystème digital complet (administration + visibilité + mobilité) et parfaitement adapté à vos besoins.",
+  },
+
+  {
+    firstName: 'LORA',
+    lastName: 'PERRICHON',
+    id: 'lora',
+    jobTitle: 'Étudiante développeuse full-stack JS',
+    githubLink: '',
+    facebookLink: '',
+    linkedinLink: '',
+    twitterLink: '',
+    profilePictureUrl: 'img/lora.png',
     presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
     magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
     assumenda accusantium corporis mollitia nisi necessitatibus
     obcaecati accusamus. Obcaecati`,
   },
-  
+
   {
-    firstName: "JULIEN", 
-    lastName: "VIGNERON",
-    id: "julien", 
-    jobTitle: "Étudiant développeur full-stack JS",
-    githubLink: "https://github.com/gnos28",
-    facebookLink: "",
-    linkedinLink: "https://www.linkedin.com/in/julienvigneron/",
-    twitterLink: "",
-    profilePictureUrl: "img/julien.png",
-    presentationText: "Fort de 10 années d'expérience au sein d'un service ressources humaines, je suis a même de comprendre vos problèmatiques, analyser vos processus et être force de proposition pour fluidifier votre gestion administrative.<br><br>L'expérience utilisateur et la satisfaction client sont mes priorités.<br><br>Mon ambition sur 2022 est d'élargir mon champ de compétences autour du javascript en acquérant la maitrise des frameworks react / react native et de la plateforme backend NodeJS afin de vous proposer à terme un écosystème digital complet (administration + visibilité + mobilité) et parfaitement adapté à vos besoins.",
-  },
-  
-  {
-    firstName: "LORA", 
-    lastName: "PERRICHON",
-    id: "lora", 
-    jobTitle: "Étudiante développeuse full-stack JS",
-    githubLink: "",
-    facebookLink: "",
-    linkedinLink: "",
-    twitterLink: "",
-    profilePictureUrl: "img/lora.png",
-    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
-    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
-    assumenda accusantium corporis mollitia nisi necessitatibus
-    obcaecati accusamus. Obcaecati`,
-  },
-  
-  {
-    firstName: "ALEXANDRE", 
-    lastName: "PILLIAS",
-    id: "alex", 
-    jobTitle: "Étudiant développeur full-stack JS",
-    githubLink: "https://github.com/kaitolight",
-    facebookLink: "",
-    linkedinLink: "https://www.linkedin.com/in/alexandre-pillias-ab3415234/",
-    twitterLink: "",
-    profilePictureUrl: "img/alexandre.png",
+    firstName: 'ALEXANDRE',
+    lastName: 'PILLIAS',
+    id: 'alex',
+    jobTitle: 'Étudiant développeur full-stack JS',
+    githubLink: 'https://github.com/kaitolight',
+    facebookLink: '',
+    linkedinLink: 'https://www.linkedin.com/in/alexandre-pillias-ab3415234/',
+    twitterLink: '',
+    profilePictureUrl: 'img/alexandre.png',
     presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
     magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
     assumenda accusantium corporis mollitia nisi necessitatibus
@@ -585,149 +582,140 @@ const presentationTable = [
 ]
 
 presentationTable.forEach((person, personIndex) => {
-  const teamGoing = document.createElement("div"); 
-  teamGoing.classList.add("team-going");
-  teamGoing.classList.add("reveal-light-hidden")
+  const teamGoing = document.createElement('div')
+  teamGoing.classList.add('team-going')
+  teamGoing.classList.add('reveal-light-hidden')
 
   for (let i = 0; i < presentationTable.length; i++) {
-     if (i != personIndex)
-     {
-       const aTeamGoing = document.createElement("a")
-       aTeamGoing.href = "#"+presentationTable[i].id
-       const imgTeamGoing = document.createElement("img")
-       imgTeamGoing.src = presentationTable[i].profilePictureUrl
-       imgTeamGoing.alt = presentationTable[i].firstName
-       imgTeamGoing.classList.add('team-photo')
+    if (i != personIndex) {
+      const aTeamGoing = document.createElement('a')
+      aTeamGoing.href = '#' + presentationTable[i].id
+      const imgTeamGoing = document.createElement('img')
+      imgTeamGoing.src = presentationTable[i].profilePictureUrl
+      imgTeamGoing.alt = presentationTable[i].firstName
+      imgTeamGoing.classList.add('team-photo')
 
-       aTeamGoing.appendChild(imgTeamGoing)
+      aTeamGoing.appendChild(imgTeamGoing)
 
-       teamGoing.appendChild(aTeamGoing)
-     }
+      teamGoing.appendChild(aTeamGoing)
+    }
   }
 
-  const section = document.createElement("section"); 
-  section.classList.add("about");
+  const section = document.createElement('section')
+  section.classList.add('about')
 
-  const ancre = document.createElement("div");
-  ancre.classList.add("ancre");
-  ancre.id = person.id; 
+  const ancre = document.createElement('div')
+  ancre.classList.add('ancre')
+  ancre.id = person.id
 
-  const container = document.createElement("div");
-  container.classList.add("container");
+  const container = document.createElement('div')
+  container.classList.add('container')
 
-  const detailedPresentation = document.createElement("div");
-  detailedPresentation.classList.add("detailed-presentation")
-  detailedPresentation.classList.add("reveal-light-hidden"); 
+  const detailedPresentation = document.createElement('div')
+  detailedPresentation.classList.add('detailed-presentation')
+  detailedPresentation.classList.add('reveal')
 
-  const flexTitle = document.createElement("div"); 
-  flexTitle.classList.add("flex-title"); 
+  const flexTitle = document.createElement('div')
+  flexTitle.classList.add('flex-title')
 
-  const titleH2 = document.createElement("h2");
-  titleH2.innerText = person.firstName + " " + person.lastName 
-  
-  const jobTitle = document.createElement("h3"); 
-  jobTitle.innerText = person.jobTitle; 
+  const titleH2 = document.createElement('h2')
+  titleH2.innerText = person.firstName + ' ' + person.lastName
 
-  const pictoContainerDesktop = document.createElement("div"); 
-  pictoContainerDesktop.classList.add("presentation-picto"); 
+  const jobTitle = document.createElement('h3')
+  jobTitle.innerText = person.jobTitle
+
+  const pictoContainerDesktop = document.createElement('div')
+  pictoContainerDesktop.classList.add('presentation-picto')
 
   const pictList = [
-    {imgUrl:"img/github.png",
-    socialLink:person.githubLink,
-  },
-    {imgUrl:"img/linkedin.png",
-    socialLink:person.linkedinLink,
-  },
-    {imgUrl:"img/twitter.png",
-    socialLink:person.twitterLink,
-  },
-    {imgUrl:"img/facebook.png",
-    socialLink:person.facebookLink
-  },
+    { imgUrl: 'img/github.png', socialLink: person.githubLink },
+    { imgUrl: 'img/linkedin.png', socialLink: person.linkedinLink },
+    { imgUrl: 'img/twitter.png', socialLink: person.twitterLink },
+    { imgUrl: 'img/facebook.png', socialLink: person.facebookLink },
   ]
 
-  pictList.forEach(picto => { 
-    const pictoLink = document.createElement("a"); 
-    if(picto.socialLink.length)
-      pictoLink.href = picto.socialLink;
-    const alt = picto.imgUrl.split("/")[1].split(".")[0]
-    const pictoImg = document.createElement("img"); 
+  pictList.forEach((picto) => {
+    const pictoLink = document.createElement('a')
+    if (picto.socialLink.length) pictoLink.href = picto.socialLink
+    pictoLink.target = "_blank"
+    const alt = picto.imgUrl.split('/')[1].split('.')[0]
+    const pictoImg = document.createElement('img')
     pictoImg.src = picto.imgUrl
     pictoImg.alt = alt
-    if(!picto.socialLink.length)
-      pictoImg.classList.add("noSocialNetwork")
-    pictoLink.appendChild(pictoImg);
-    
-    pictoContainerDesktop.appendChild(pictoLink);
+    if (!picto.socialLink.length) pictoImg.classList.add('noSocialNetwork')
+    pictoLink.appendChild(pictoImg)
+
+    pictoContainerDesktop.appendChild(pictoLink)
   })
 
   pictoContainerMobile = pictoContainerDesktop.cloneNode(true)
 
-  pictoContainerDesktop.classList.add("presentation-picto-desktop");
-  pictoContainerMobile.classList.add("presentation-picto-mobile");
-  
+  pictoContainerDesktop.classList.add('presentation-picto-desktop')
+  pictoContainerMobile.classList.add('presentation-picto-mobile')
 
-  const profilePicto = document.createElement("div");
-  profilePicto.classList.add("profile-picto"); 
+  const profilePicto = document.createElement('div')
+  profilePicto.classList.add('profile-picto')
 
-  const presentationImg = document.createElement("div"); 
-  presentationImg.classList.add("presentation-img"); 
+  const presentationImg = document.createElement('div')
+  presentationImg.classList.add('presentation-img')
 
-  const easyPhoto = document.createElement("img"); 
-  easyPhoto.classList.add("easy-photo")
-  easyPhoto.alt = person.firstName;
-  easyPhoto.src = person.profilePictureUrl;
+  const easyPhoto = document.createElement('img')
+  easyPhoto.classList.add('easy-photo')
+  easyPhoto.alt = person.firstName
+  easyPhoto.src = person.profilePictureUrl
 
-  const presText = document.createElement("div"); 
-  presText.classList.add("presentation-text"); 
-  presText.classList.add("reveal");
-  presText.innerHTML = person.presentationText; 
+  const presText = document.createElement('div')
+  presText.classList.add('presentation-text')
+  presText.classList.add('reveal-light-hidden')
+  presText.innerHTML = person.presentationText
 
   // const teamGoing =
 
-  section.appendChild(ancre);
-  section.appendChild(container); 
+  section.appendChild(ancre)
+  section.appendChild(container)
 
-  container.appendChild(detailedPresentation);
-  detailedPresentation.appendChild(flexTitle);
+  container.appendChild(detailedPresentation)
+  detailedPresentation.appendChild(flexTitle)
 
-  detailedPresentation.appendChild(profilePicto);
-  
-  
-  flexTitle.appendChild(titleH2); 
-  flexTitle.appendChild(jobTitle); 
-  flexTitle.appendChild(pictoContainerDesktop);
-  
+  detailedPresentation.appendChild(profilePicto)
+
+  flexTitle.appendChild(titleH2)
+  flexTitle.appendChild(jobTitle)
+  flexTitle.appendChild(pictoContainerDesktop)
+
   profilePicto.appendChild(presentationImg)
-  profilePicto.appendChild(pictoContainerMobile);
-  
-  presentationImg.appendChild(easyPhoto); 
+  profilePicto.appendChild(pictoContainerMobile)
 
-  container.appendChild(presText);
+  presentationImg.appendChild(easyPhoto)
 
-  container.appendChild(teamGoing);
+  container.appendChild(presText)
 
-  main.appendChild(section); // penser à rajouter les chevrons
-        
+  container.appendChild(teamGoing)
+
+  main.appendChild(section) // penser à rajouter les chevrons
 })
-
-
 
 // ********************* DEBUT INTERSECTION OBSERVER *********************
 
 // chopper largeur viewport
 let viewWidth = window.innerWidth
 let baseSquareSize = Math.floor(window.innerWidth * 0.055)
+if(baseSquareSize>88) baseSquareSize=88
+if(baseSquareSize<19) baseSquareSize=19
+let observer
 
 const addReveal = (firstLoad = false) => {
+  // console.log('addReveal', firstLoad)
   // création des quadrillages
   const reveals = document.querySelectorAll('.reveal')
   const revealLight = document.querySelectorAll('.reveal-light-hidden')
-  let observer
+
   if (firstLoad) observer = new IntersectionObserver(handleIntersect, options)
 
   reveals.forEach((reveal) => {
-    // console.log("*************", reveal)
+
+    // console.log("************* reveal.target", reveal)
+    // console.log("reveal.isLoaded", reveal.isLoaded)
     // console.log("jquery height()",$(reveal).height())
     // console.log("jquery outerHeight()",$(reveal).outerHeight())
     // console.log("reveal.clientHeight",reveal.clientHeight)
@@ -788,10 +776,12 @@ const addReveal = (firstLoad = false) => {
         // console.log("boloss",reveal.tinySquares)
       }
     }
+    // console.log("observe reveal", observer)
     observer.observe(reveal)
   })
 
   revealLight.forEach((reveal) => {
+    // console.log('observe reveal light', observer)
     observer.observe(reveal)
   })
 }
@@ -811,38 +801,53 @@ const handleIntersect = function (reveals, observer) {
         reveal.target.classList.remove('reveal-light-hidden')
         reveal.target.classList.add('reveal-light')
       } else {
-        const xLength = reveal.target.tinySquares.length
-        const yLength = reveal.target.tinySquares[0].length
+        if (!reveal.isLoaded) {
+          // console.log('reveal.target', reveal.target)
+          // console.log('reveal.target.tinySquares', reveal.target.tinySquares)
+          const xLength = reveal.target.tinySquares.length
+          const yLength = reveal.target.tinySquares[0].length
 
-        const totalLength = xLength + yLength
-        // console.log("reveal.target.tinySquares", reveal.target.tinySquares)
-        // console.log("totalLength",totalLength)
+          const totalLength = xLength + yLength
+          // console.log("reveal.target.tinySquares", reveal.target.tinySquares)
+          // console.log("totalLength",totalLength)
 
-        for (let i = 0; i < totalLength; i++) {
-          // console.log("i", i)
-          for (let x = i; x >= 0; x--) {
-            // console.log(x, i-x)
+          for (let i = 0; i < totalLength; i++) {
+            // console.log("i", i)
+            for (let x = i; x >= 0; x--) {
+              // console.log(x, i-x)
 
-            //if(reveal.target.tinySquares[x][i-x] !== undefined)
+              //if(reveal.target.tinySquares[x][i-x] !== undefined)
 
-            if (
-              x < reveal.target.tinySquares.length &&
-              i - x < reveal.target.tinySquares[0].length
-            )
-              window.setTimeout(() => {
-                reveal.target.tinySquares[x][i - x].classList.add(
-                  'reveal-animate'
-                )
-                window.setTimeout(
-                  () => reveal.target.tinySquares[x][i - x].remove(),
-                  1000
-                )
-              }, i * 100)
+              if (
+                x < reveal.target.tinySquares.length &&
+                i - x < reveal.target.tinySquares[0].length
+              )
+                window.setTimeout(() => {
+                  // console.log('inside timeout', reveal.target.tinySquares)
+                  if (
+                    x < reveal.target.tinySquares.length &&
+                    i - x < reveal.target.tinySquares[0].length
+                  ) {
+                    reveal.target.tinySquares[x][i - x].classList.add(
+                      'reveal-animate'
+                    )
+                    window.setTimeout(() => {
+                      if (
+                        x < reveal.target.tinySquares.length &&
+                        i - x < reveal.target.tinySquares[0].length
+                      ) {
+                        reveal.target.tinySquares[x][i - x].remove()
+                      }
+                    }, 1000)
+                  }
+                }, i * 100)
+            }
           }
         }
       }
-
-      // observer.unobserve(reveal.target)
+      // console.log("reveal.isLoaded = true", reveal.target)
+      reveal.target.isLoaded = true
+      observer.unobserve(reveal.target)
     }
   })
 }
@@ -850,6 +855,8 @@ const handleIntersect = function (reveals, observer) {
 window.addEventListener('resize', (e) => {
   viewWidth = window.innerWidth
   baseSquareSize = Math.floor(window.innerWidth * 0.055)
+  if(baseSquareSize>88) baseSquareSize=88
+  if(baseSquareSize<19) baseSquareSize=19
   addReveal()
 })
 

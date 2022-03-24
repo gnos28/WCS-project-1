@@ -1,248 +1,265 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wild Code School - Projet 1</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wild Code School - Projet 1</title>
-  <link rel="stylesheet" href="style/style.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="app.js" defer></script>
-</head>
-
-<body>
-  <header>
-    <div class="header-container">
-      <a href="#accueil">
-        <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          x="0px" y="0px" viewBox="0 0 90 100" style="enable-background: new 0 0 90 100" xml:space="preserve">
-          <style type="text/css">
-            .st0 {
-              fill: #2c5d87;
-            }
-          </style>
-          <path class="st0" d="M41.3,46.4c2,1.1,5.2,1.1,7.1,0l35.9-20.8c2-1.1,2-3,0-4.1L48.5,0.7c-2-1.1-5.2-1.1-7.2,0L5.4,21.4
-	c-2,1.1-2,3,0,4.1L41.3,46.4z" />
-          <path class="st0" d="M43.2,55.7c0-2.3-1.6-5.1-3.6-6.2l-36-20.9c-2-1.1-3.6-0.2-3.6,2.1v41.7c0,2.3,1.6,5.1,3.6,6.2l36,20.8
-	c2,1.1,3.6,0.2,3.6-2.1L43.2,55.7L43.2,55.7z" />
-          <path class="st0" d="M50.2,49.5c-2,1.1-3.6,3.9-3.6,6.2l0,41.6c0,2.3,1.6,3.2,3.6,2.1l36-20.8c2-1.1,3.6-3.9,3.6-6.2l0-41.7
-	c0-2.3-1.6-3.2-3.6-2.1L50.2,49.5z" />
-        </svg>
-      </a>
-      <div class="main-title">
-        <h1>THE SQUARE PROJECT</h1>
-      </div>
-      <a href="#" id="burger-menu">
-        <custom-burger></custom-burger>
-      </a>
-    </div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#accueil">ACCUEIL</a></li>
-      <li><a href="#team">LA TEAM</a></li>
-      <li class="sub-li"><a href="#antho">Anthony</a></li>
-      <li class="sub-li"><a href="#emma">Emma</a></li>
-      <li class="sub-li"><a href="#julien">Julien</a></li>
-      <li class="sub-li"><a href="#lora">Lora</a></li>
-      <li class="sub-li"><a href="#alex">Alexandre</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section class="accueil">
-      <div class="ancre" id="accueil"></div>
-      <div class="container">
-        <!-- <div class="texte-photo">
-            <div class="image-accueil"></div>
-            <p class="description-accueil">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              repellendus minima dolorum error corporis. Aspernatur, sequi
-              molestiae odit hic sed eaque fugiat animi voluptatum. Neque dicta
-              omnis sequi vitae harum. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Autem repellendus minima dolorum error corporis.
-              Aspernatur, sequi molestiae odit hic sed eaque fugiat animi
-              voluptatum. Neque dicta omnis sequi vitae harum. Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Autem repellendus minima
-              dolorum error corporis. Aspernatur, sequi molestiae odit hic sed
-              eaque fugiat animi voluptatum. Neque dicta omnis sequi vitae
-              harum.
-            </p>
-          </div> -->
-
-        <div class="parent">
-          <div class="child1 reveal-light-hidden"></div>
-          <h2 class="reveal-light-hidden">La génèse du projet</h2>
-          <div class="child2 reveal-light-hidden">
-            <p>
-              Le "square project" est le premier projet qui nous a été assigné
-              lors de notre formation à la Wild Code School.
-            </p>
-            <p>
-              Ce projet consiste en un petit site réalisé format "one page"
-              présentant les membres de notre équipe et ayant principalement
-              pour but de démontrer notre capacité à maitriser les briques
-              élementaires HTML / CSS et nous apprendre à travailler en équipe
-              sur un même fichier.
-            </p>
-            <p>
-              Nous avons profité du fait que notre groupe est nommé "square
-              group" pour mettre en oeuvre une charte graphique basée sur
-              l'exploitation des formes carrées et cubiques.
-            </p>
-            <p>
-              Le carré (ou rectangle) étant par ailleur la forme de base de
-              tout élement HTML, cela nous a bien sûr facilité le travail et
-              il s'agissait d'une opportunité à ne pas manquer !
-            </p>
-          </div>
-          <h2 class="reveal-light-hidden">Place aux présentations !</h2>
-          <div class="members-photo-accueil reveal-light-hidden">
-            <img src="img/anthony.png" alt="anthony" class="miniature" />
-            <img src="img/emma.png" alt="emma" class="miniature" />
-            <img src="img/julien.png" alt="julien" class="miniature" />
-            <img src="img/lora.png" alt="lora" class="miniature" />
-            <img src="img/alexandre.png" alt="Alexandre" class="miniature" />
-          </div>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="#accueil">
+          <svg
+            version="1.1"
+            id="Calque_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 90 100"
+            style="enable-background: new 0 0 90 100"
+            xml:space="preserve"
+          >
+            <style type="text/css">
+              .st0 {
+                fill: #2c5d87;
+              }
+            </style>
+            <path
+              class="st0"
+              d="M41.3,46.4c2,1.1,5.2,1.1,7.1,0l35.9-20.8c2-1.1,2-3,0-4.1L48.5,0.7c-2-1.1-5.2-1.1-7.2,0L5.4,21.4
+	c-2,1.1-2,3,0,4.1L41.3,46.4z"
+            />
+            <path
+              class="st0"
+              d="M43.2,55.7c0-2.3-1.6-5.1-3.6-6.2l-36-20.9c-2-1.1-3.6-0.2-3.6,2.1v41.7c0,2.3,1.6,5.1,3.6,6.2l36,20.8
+	c2,1.1,3.6,0.2,3.6-2.1L43.2,55.7L43.2,55.7z"
+            />
+            <path
+              class="st0"
+              d="M50.2,49.5c-2,1.1-3.6,3.9-3.6,6.2l0,41.6c0,2.3,1.6,3.2,3.6,2.1l36-20.8c2-1.1,3.6-3.9,3.6-6.2l0-41.7
+	c0-2.3-1.6-3.2-3.6-2.1L50.2,49.5z"
+            />
+          </svg>
+        </a>
+        <div class="main-title">
+          <h1>THE SQUARE PROJECT</h1>
         </div>
-      </div>
-      <div class="container-chevron">
-        <a href="#team">
-          <img src="img/chevrons.png" alt="" />
+        <a href="#" id="burger-menu">
+          <custom-burger></custom-burger>
         </a>
       </div>
-    </section>
+    </header>
 
-    <section class="square-team">
-      <div class="ancre" id="team"></div>
-      <div class="container">
-        <h2 class="reveal-light-hidden">the square team</h2>
-        <div class="wrapper-team reveal-light-hidden">
-          <a href="#antho" class="box box-1">
-            <img class="img-overlay" src="img/anthony.png" alt="avatar de Anthony" />
-            <img src="img/anthony-2.jpg" alt="Photo de Anthony" />
-            <div class="box-name">
-              <h3>Anthony</h3>
-              <h4>Développeur web<br />Fullstack JS</h4>
+    <nav>
+      <ul>
+        <li><a href="#accueil">ACCUEIL</a></li>
+        <li><a href="#team">LA TEAM</a></li>
+        <li class="sub-li"><a href="#antho">Anthony</a></li>
+        <li class="sub-li"><a href="#emma">Emma</a></li>
+        <li class="sub-li"><a href="#julien">Julien</a></li>
+        <li class="sub-li"><a href="#lora">Lora</a></li>
+        <li class="sub-li"><a href="#alex">Alexandre</a></li>
+      </ul>
+    </nav>
 
-            </div>
-          </a>
-          <a href="#lora" class="box box-2">
-            <img class="img-overlay" src="img/lora.png" alt="avatar de Lora" />
-            <img src="img/lora-2.jpg" alt="Photo de Lora" />
-            <div class="box-name">
-              <h3>Lora</h3>
-              <h4>Développeuse web<br />Fullstack JS</h4>
-            </div>
-          </a>
-          <a href="#julien" class="box box-3">
-            <img class="img-overlay" src="img/julien.png" alt="avatar de Julien" />
-            <img src="img/julien-2.jpg" alt="Photo de Julien" />
-            <div class="box-name">
-              <h3>Julien</h3>
-              <h4>Développeur web<br />Fullstack JS</h4>
-            </div>
-          </a>
-          <a href="#emma" class="box box-4">
-            <img class="img-overlay" src="img/emma.png" alt="avatar de Emma" />
-            <img src="img/emma-2.jpg" alt="Photo de Emma" />
-            <div class="box-name">
-              <h3>Emma</h3>
-              <h4>Développeuse web<br />Fullstack JS</h4>
-            </div>
-          </a>
-          <a href="#alex" class="box box-5">
-            <img class="img-overlay" src="img/alexandre.png" alt="avatar de Alexandre" />
-            <img src="img/alexandre-2.jpg" alt="Photo de Alexandre" />
-            <div class="box-name">
-              <h3>Alexandre</h3>
-              <h4>Développeur web<br />Fullstack JS</h4>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="container-chevron">
-        <a href="#antho">
-          <img src="img/chevrons.png" alt="" />
-        </a>
-      </div>
-    </section>
-
-    <section class="about about-anthony">
-      <div class="ancre" id="antho"></div>
-      <div class="container"></div>
-      <div class="container-chevron">
-        <a href="#emma">
-          <img src="img/chevrons.png" alt="" />
-        </a>
-      </div>
-    </section>
-
-    <section class="about about-julien">
-      <div class="ancre" id="julien"></div>
-      <div class="container"></div>
-      <div class="container-chevron">
-        <a href="#lora">
-          <img src="img/chevrons.png" alt="" />
-        </a>
-      </div>
-    </section>
-
-    <section class="about about-alexandre">
-      <div class="ancre" id="alex"></div>
-      <div class="container">
-        <div class="detailed-presentation reveal-light-hidden">
-          <div class="flex-title">
-            <h2>ALEXANDRE PILLIAS</h2>
-            <h3>Étudiant développeur full-stack JS</h3>
-            <div class="presentation-picto presentation-picto-desktop">
-              <a href="www.test.com"><img src="img/github.png" alt="" /></a>
-              <a><img src="img/linkedin.png" alt="" class="noSocialNetwork" /></a>
-              <a><img src="img/twitter.png" alt="" /></a>
-              <a><img src="img/facebook.png" alt="" /></a>
+    <main>
+      <section class="accueil">
+        <div class="ancre" id="accueil"></div>
+        <div class="container">
+          <div class="parent">
+            <div class="child1 reveal-light-hidden"></div>
+            <!-- <h2 class="reveal-light-hidden">La génèse du projet</h2> -->
+            <div class="child2 reveal-light-hidden">
+              <p>
+                Le "square project" est le premier projet qui nous a été assigné
+                lors de notre formation à la Wild Code School.
+              </p>
+              <p>
+                Ce projet consiste en un petit site réalisé au format "one
+                page". Le but est de présenter les membres de notre équipe mais
+                également de démontrer notre capacité à maitriser les briques
+                élementaires HTML / CSS, ce qui nous permet d'apprendre à
+                travailler en équipe sur un même fichier.
+              </p>
+              <p>
+                Nous avons profité du fait que notre groupe est nommé "square
+                group" pour mettre en oeuvre une charte graphique basée sur
+                l'exploitation des formes carrées et cubiques.
+              </p>
+              <p>
+                Le carré (ou rectangle) étant par ailleur la forme de base de
+                tout élement HTML, cela nous a bien sûr facilité le travail et
+                il s'agissait d'une opportunité à ne pas manquer !
+              </p>
             </div>
           </div>
-          <div class="profile-picto">
-            <div class="presentation-img">
-              <img src="img/alexandre.png" alt="alexandre" class="easy-photo" />
-            </div>
-            <div class="presentation-picto presentation-picto-mobile">
-              <a href="www.test.com"><img src="img/github.png" alt="" /></a>
-              <a><img src="img/linkedin.png" alt="" class="noSocialNetwork" /></a>
-              <a><img src="img/twitter.png" alt="" /></a>
-              <a><img src="img/facebook.png" alt="" /></a>
+          <div class="photos-accueil-pres">
+            <h2 class="reveal-light-hidden">place aux présentations !</h2>
+            <div class="members-photo-accueil reveal-light-hidden">
+              <img src="img/anthony.png" alt="anthony" class="miniature" />
+              <img src="img/emma.png" alt="emma" class="miniature" />
+              <img src="img/julien.png" alt="julien" class="miniature" />
+              <img src="img/lora.png" alt="lora" class="miniature" />
+              <img src="img/alexandre.png" alt="Alexandre" class="miniature" />
             </div>
           </div>
         </div>
-        <div class="presentation-text reveal">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-          assumenda natus officia odit saepe esse libero delectus temporibus?
-          Eligendi velit ad quasi inventore ipsa modi autem architecto amet
-          magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
-          assumenda accusantium corporis mollitia nisi necessitatibus
-          obcaecati accusamus. Obcaecati,
+        <div class="container-chevron">
+          <a href="#team">
+            <img src="img/chevrons.png" alt="" />
+          </a>
         </div>
-        <div class="team-going reveal-light-hidden">
-          <a href="#antho"><img src="img/anthony.png" alt="anthony" class="team-photo" /></a>
-          <a href="#emma"><img src="img/emma.png" alt="emma" class="team-photo" /></a>
-          <a href="#julien"><img src="img/julien.png" alt="julien" class="team-photo" /></a>
-          <a href="#lora"><img src="img/lora.png" alt="lora" class="team-photo" /></a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <!-- <div class="container"> -->
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
-      distinctio.
-    </p>
-    <br />
-    <p class="credits">© thesquareteam</p>
-    <!-- </div> -->
-  </footer>
-</body>
+      </section>
 
+      <section class="square-team">
+        <div class="ancre" id="team"></div>
+        <div class="container">
+          <h2 class="reveal-light-hidden">the square team</h2>
+          <div class="wrapper-team reveal-light-hidden">
+            <a href="#antho" class="box box-1">
+              <img
+                class="img-overlay"
+                src="img/anthony.png"
+                alt="avatar de Anthony"
+              />
+              <img src="img/anthony-2.jpg" alt="Photo de Anthony" />
+              <div class="box-name">
+                <h3>Anthony</h3>
+                <h4>Développeur web<br />Fullstack JS</h4>
+              </div>
+            </a>
+            <a href="#lora" class="box box-2">
+              <img
+                class="img-overlay"
+                src="img/lora.png"
+                alt="avatar de Lora"
+              />
+              <img src="img/lora-2.jpg" alt="Photo de Lora" />
+              <div class="box-name">
+                <h3>Lora</h3>
+                <h4>Développeuse web<br />Fullstack JS</h4>
+              </div>
+            </a>
+            <a href="#julien" class="box box-3">
+              <img
+                class="img-overlay"
+                src="img/julien.png"
+                alt="avatar de Julien"
+              />
+              <img src="img/julien-2.jpg" alt="Photo de Julien" />
+              <div class="box-name">
+                <h3>Julien</h3>
+                <h4>Développeur web<br />Fullstack JS</h4>
+              </div>
+            </a>
+            <a href="#emma" class="box box-4">
+              <img
+                class="img-overlay"
+                src="img/emma.png"
+                alt="avatar de Emma"
+              />
+              <img src="img/emma-2.jpg" alt="Photo de Emma" />
+              <div class="box-name">
+                <h3>Emma</h3>
+                <h4>Développeuse web<br />Fullstack JS</h4>
+              </div>
+            </a>
+            <a href="#alex" class="box box-5">
+              <img
+                class="img-overlay"
+                src="img/alexandre.png"
+                alt="avatar de Alexandre"
+              />
+              <img src="img/alexandre-2.jpg" alt="Photo de Alexandre" />
+              <div class="box-name">
+                <h3>Alexandre</h3>
+                <h4>Développeur web<br />Fullstack JS</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="container-chevron">
+          <a href="#antho">
+            <img src="img/chevrons.png" alt="" />
+          </a>
+        </div>
+      </section>
+
+
+      <!-- <section class="about">
+        <div class="ancre" id="alex"></div>
+        <div class="container">
+          <div class="detailed-presentation reveal-light-hidden">
+            <div class="flex-title">
+              <h2>ALEXANDRE PILLIAS</h2>
+              <h3>Étudiant développeur full-stack JS</h3>
+              <div class="presentation-picto presentation-picto-desktop">
+                <a href="www.test.com"><img src="img/github.png" alt="" /></a>
+                <a
+                  ><img src="img/linkedin.png" alt="" class="noSocialNetwork"
+                /></a>
+                <a><img src="img/twitter.png" alt="" /></a>
+                <a><img src="img/facebook.png" alt="" /></a>
+              </div>
+            </div>
+            <div class="profile-picto">
+              <div class="presentation-img">
+                <img
+                  src="img/alexandre.png"
+                  alt="alexandre"
+                  class="easy-photo"
+                />
+              </div>
+              <div class="presentation-picto presentation-picto-mobile">
+                <a href="www.test.com"><img src="img/github.png" alt="" /></a>
+                <a
+                  ><img src="img/linkedin.png" alt="" class="noSocialNetwork"
+                /></a>
+                <a><img src="img/twitter.png" alt="" /></a>
+                <a><img src="img/facebook.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="presentation-text reveal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            assumenda natus officia odit saepe esse libero delectus temporibus?
+            Eligendi velit ad quasi inventore ipsa modi autem architecto amet
+            magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
+            assumenda accusantium corporis mollitia nisi necessitatibus
+            obcaecati accusamus. Obcaecati,
+          </div>
+          <div class="team-going reveal-light-hidden">
+            <a href="#antho"
+              ><img src="img/anthony.png" alt="anthony" class="team-photo"
+            /></a>
+            <a href="#emma"
+              ><img src="img/emma.png" alt="emma" class="team-photo"
+            /></a>
+            <a href="#julien"
+              ><img src="img/julien.png" alt="julien" class="team-photo"
+            /></a>
+            <a href="#lora"
+              ><img src="img/lora.png" alt="lora" class="team-photo"
+            /></a>
+          </div>
+        </div>
+      </section> -->
+    </main>
+    <footer>
+      <!-- <div class="container"> -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+        distinctio.
+      </p>
+      <br />
+      <p class="credits">© thesquareteam</p>
+      <!-- </div> -->
+    </footer>
+  </body>
 </html>
