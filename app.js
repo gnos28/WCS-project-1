@@ -489,6 +489,230 @@ words.forEach((word) => {
   titleDiv.appendChild(wordDiv)
 })
 
+// Animations box-img
+const imgOverlay = document.querySelectorAll('.img-overlay')
+const boxImg = document.querySelectorAll('.box')
+
+imgOverlay.forEach((img, index) => {
+  img.addEventListener('mouseover', function () {
+    boxImg[index].classList.add('box-hover')
+  })
+  img.addEventListener('mouseleave', function () {
+    boxImg[index].classList.remove('box-hover')
+  })
+})
+
+// ********************* DEBUT DOM PRESENTATION DETAILLEE *********************
+
+
+const presentationTable = [
+  {
+    firstName: "ANTHONY", 
+    lastName: "AUBERT",
+    id: "antho", 
+    jobTitle: "Étudiant développeur full-stack JS",
+    githubLink: "",
+    facebookLink: "",
+    linkedinLink: "",
+    twitterLink: "",
+    profilePictureUrl: "img/anthony.png",
+    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
+    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
+    assumenda accusantium corporis mollitia nisi necessitatibus
+    obcaecati accusamus. Obcaecati`,
+  },
+  
+  {
+    firstName: "EMMA", 
+    lastName: "BIGNON",
+    id: "emma", 
+    jobTitle: "Étudiante développeuse full-stack JS",
+    githubLink: "",
+    facebookLink: "",
+    linkedinLink: "",
+    twitterLink: "",
+    profilePictureUrl: "img/emma.png",
+    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
+    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
+    assumenda accusantium corporis mollitia nisi necessitatibus
+    obcaecati accusamus. Obcaecati`,
+  },
+  
+  {
+    firstName: "JULIEN", 
+    lastName: "VIGNERON",
+    id: "julien", 
+    jobTitle: "Étudiant développeur full-stack JS",
+    githubLink: "https://github.com/gnos28",
+    facebookLink: "",
+    linkedinLink: "https://www.linkedin.com/in/julienvigneron/",
+    twitterLink: "",
+    profilePictureUrl: "img/julien.png",
+    presentationText: "Fort de 10 années d'expérience au sein d'un service ressources humaines, je suis a même de comprendre vos problèmatiques, analyser vos processus et être force de proposition pour fluidifier votre gestion administrative.<br><br>L'expérience utilisateur et la satisfaction client sont mes priorités.<br><br>Mon ambition sur 2022 est d'élargir mon champ de compétences autour du javascript en acquérant la maitrise des frameworks react / react native et de la plateforme backend NodeJS afin de vous proposer à terme un écosystème digital complet (administration + visibilité + mobilité) et parfaitement adapté à vos besoins.",
+  },
+  
+  {
+    firstName: "LORA", 
+    lastName: "PERRICHON",
+    id: "lora", 
+    jobTitle: "Étudiante développeuse full-stack JS",
+    githubLink: "",
+    facebookLink: "",
+    linkedinLink: "",
+    twitterLink: "",
+    profilePictureUrl: "img/lora.png",
+    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
+    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
+    assumenda accusantium corporis mollitia nisi necessitatibus
+    obcaecati accusamus. Obcaecati`,
+  },
+  
+  {
+    firstName: "ALEXANDRE", 
+    lastName: "PILLIAS",
+    id: "alex", 
+    jobTitle: "Étudiant développeur full-stack JS",
+    githubLink: "https://github.com/kaitolight",
+    facebookLink: "",
+    linkedinLink: "https://www.linkedin.com/in/alexandre-pillias-ab3415234/",
+    twitterLink: "",
+    profilePictureUrl: "img/alexandre.png",
+    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
+    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
+    assumenda accusantium corporis mollitia nisi necessitatibus
+    obcaecati accusamus. Obcaecati`,
+  },
+]
+
+presentationTable.forEach((person, personIndex) => {
+  const teamGoing = document.createElement("div"); 
+  teamGoing.classList.add("team-going");
+  teamGoing.classList.add("reveal-light-hidden")
+
+  for (let i = 0; i < presentationTable.length; i++) {
+     if (i != personIndex)
+     {
+       const aTeamGoing = document.createElement("a")
+       aTeamGoing.href = "#"+presentationTable[i].id
+       const imgTeamGoing = document.createElement("img")
+       imgTeamGoing.src = presentationTable[i].profilePictureUrl
+       imgTeamGoing.alt = presentationTable[i].firstName
+       imgTeamGoing.classList.add('team-photo')
+
+       aTeamGoing.appendChild(imgTeamGoing)
+
+       teamGoing.appendChild(aTeamGoing)
+     }
+  }
+
+  const section = document.createElement("section"); 
+  section.classList.add("about");
+
+  const ancre = document.createElement("div");
+  ancre.classList.add("ancre");
+  ancre.id = person.id; 
+
+  const container = document.createElement("div");
+  container.classList.add("container");
+
+  const detailedPresentation = document.createElement("div");
+  detailedPresentation.classList.add("detailed-presentation")
+  detailedPresentation.classList.add("reveal-light-hidden"); 
+
+  const flexTitle = document.createElement("div"); 
+  flexTitle.classList.add("flex-title"); 
+
+  const titleH2 = document.createElement("h2");
+  titleH2.innerText = person.firstName + " " + person.lastName 
+  
+  const jobTitle = document.createElement("h3"); 
+  jobTitle.innerText = person.jobTitle; 
+
+  const pictoContainerDesktop = document.createElement("div"); 
+  pictoContainerDesktop.classList.add("presentation-picto"); 
+
+  const pictList = [
+    {imgUrl:"img/github.png",
+    socialLink:person.githubLink,
+  },
+    {imgUrl:"img/linkedin.png",
+    socialLink:person.linkedinLink,
+  },
+    {imgUrl:"img/twitter.png",
+    socialLink:person.twitterLink,
+  },
+    {imgUrl:"img/facebook.png",
+    socialLink:person.facebookLink
+  },
+  ]
+
+  pictList.forEach(picto => { 
+    const pictoLink = document.createElement("a"); 
+    if(picto.socialLink.length)
+      pictoLink.href = picto.socialLink;
+    const alt = picto.imgUrl.split("/")[1].split(".")[0]
+    const pictoImg = document.createElement("img"); 
+    pictoImg.src = picto.imgUrl
+    pictoImg.alt = alt
+    if(!picto.socialLink.length)
+      pictoImg.classList.add("noSocialNetwork")
+    pictoLink.appendChild(pictoImg);
+    
+    pictoContainerDesktop.appendChild(pictoLink);
+  })
+
+  pictoContainerMobile = pictoContainerDesktop.cloneNode(true)
+
+  pictoContainerDesktop.classList.add("presentation-picto-desktop");
+  pictoContainerMobile.classList.add("presentation-picto-mobile");
+  
+
+  const profilePicto = document.createElement("div");
+  profilePicto.classList.add("profile-picto"); 
+
+  const presentationImg = document.createElement("div"); 
+  presentationImg.classList.add("presentation-img"); 
+
+  const easyPhoto = document.createElement("img"); 
+  easyPhoto.classList.add("easy-photo")
+  easyPhoto.alt = person.firstName;
+  easyPhoto.src = person.profilePictureUrl;
+
+  const presText = document.createElement("div"); 
+  presText.classList.add("presentation-text"); 
+  presText.classList.add("reveal");
+  presText.innerHTML = person.presentationText; 
+
+  // const teamGoing =
+
+  section.appendChild(ancre);
+  section.appendChild(container); 
+
+  container.appendChild(detailedPresentation);
+  detailedPresentation.appendChild(flexTitle);
+
+  detailedPresentation.appendChild(profilePicto);
+  
+  
+  flexTitle.appendChild(titleH2); 
+  flexTitle.appendChild(jobTitle); 
+  flexTitle.appendChild(pictoContainerDesktop);
+  
+  profilePicto.appendChild(presentationImg)
+  profilePicto.appendChild(pictoContainerMobile);
+  
+  presentationImg.appendChild(easyPhoto); 
+
+  container.appendChild(presText);
+
+  container.appendChild(teamGoing);
+
+  main.appendChild(section); // penser à rajouter les chevrons
+        
+})
+
+
+
 // ********************* DEBUT INTERSECTION OBSERVER *********************
 
 // chopper largeur viewport
@@ -631,16 +855,3 @@ window.addEventListener('resize', (e) => {
 
 $(document).ready(addReveal(true))
 //console.log(words)
-
-// Animations box-img
-const imgOverlay = document.querySelectorAll('.img-overlay')
-const boxImg = document.querySelectorAll('.box')
-
-imgOverlay.forEach((img, index) => {
-  img.addEventListener('mouseover', function () {
-    boxImg[index].classList.add('box-hover')
-  })
-  img.addEventListener('mouseleave', function () {
-    boxImg[index].classList.remove('box-hover')
-  })
-})
