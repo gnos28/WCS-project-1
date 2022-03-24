@@ -54,6 +54,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border:1px solid red; */
 }
 
 html,
@@ -543,61 +544,6 @@ nav > ul > li a {
   padding: 0 12px;
 }
 
-@media (min-width: 419.98px) {
-  /* breakpoints section square-team */
-  .square-team h2 {
-    font-size: 2.2rem;
-  }
-
-  .square-team h2:after {
-    width: 36px;
-    height: 36px;
-    top: 50px;
-    left: calc(50% - 19px);
-  }
-
-  .box {
-    width: 40%;
-  }
-
-  .box-1,
-  .box-3 {
-    margin-right: 20px;
-  }
-
-  .box-2,
-  .box-4 {
-    margin-left: 20px;
-  }
-
-  .box h3 {
-    font-size: 1.1rem;
-  }
-}
-
-@media (min-width: 575.98px) {
-  /* breakpoints section square-team */
-  .box {
-    width: 30%;
-  }
-
-  .box-1,
-  .box-2,
-  .box-4 {
-    margin-right: 10px;
-  }
-
-  .box-2,
-  .box-3,
-  .box-5 {
-    margin-left: 10px;
-  }
-
-  .box h3 {
-    font-size: 1.2rem;
-  }
-}
-
 .square-team {
   padding: 30px 0 45px;
 }
@@ -637,15 +583,18 @@ nav > ul > li a {
   align-items: center;
   width: 45%;
   text-decoration: none;
-  margin-bottom: 25px;
-  cursor: inherit;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .box-name {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  opacity: 0;
+  pointer-events: none;
+  opacity: 1;
 }
 
 .box h3 {
@@ -687,6 +636,7 @@ nav > ul > li a {
 }
 
 @media (min-width: 419.98px) {
+
   /* breakpoints section square-team */
   .square-team h2 {
     font-size: 2.2rem;
@@ -701,6 +651,7 @@ nav > ul > li a {
 
   .box {
     width: 40%;
+    margin-bottom: 20px;
   }
 
   .box-1,
@@ -719,6 +670,7 @@ nav > ul > li a {
 }
 
 @media (min-width: 575.98px) {
+
   /* breakpoints section square-team */
   .box {
     width: 30%;
@@ -739,9 +691,13 @@ nav > ul > li a {
   .box-5 {
     margin-left: 10px;
   }
-}
 
+  .box h3 {
+    font-size: 1.2rem;
+  }
+}
 @media (min-width: 767.98px) {
+
   /* breakpoints section square-team */
   .square-team .container {
     width: 700px;
@@ -764,9 +720,10 @@ nav > ul > li a {
     border-radius: 3px;
     border: none;
     transition: 0.3s;
+    pointer-events: none;
   }
 
-  .box-hover {
+  .box:hover {
     background-color: #ffffff;
     box-shadow: 5px 5px 14px -1px rgba(0, 0, 0, 0.39);
     border: 1px solid rgba(158, 158, 158, 0.658);
@@ -774,13 +731,15 @@ nav > ul > li a {
     transition: 0.1s;
   }
 
-  .box-hover .box-name {
+  .box:hover>.box-name {
     opacity: 1;
     z-index: 98;
+    pointer-events: auto;
   }
 
   .box-name h3 {
     font-size: 1.2rem;
+    opacity: 0;
   }
 
   .box:hover h3 {
@@ -865,6 +824,7 @@ nav > ul > li a {
     left: calc(50% - 110px);
     width: 220px;
     height: 220px;
+    pointer-events: auto;
   }
 
   img.img-overlay:hover {
@@ -970,6 +930,9 @@ nav > ul > li a {
 }
 
 @media (min-width: 419.98px) {
+  .about .container {
+    padding-top: 30px;
+  }
   .profile-picto {
     display: flex;
     margin: 0 auto;
@@ -983,6 +946,10 @@ nav > ul > li a {
 }
 
 @media (min-width: 575.98px) {
+  .about .container {
+    padding-top: 45px;
+  }
+
   .presentation-text {
     width: 95%;
     overflow: scroll;
@@ -1009,6 +976,10 @@ nav > ul > li a {
 }
 
 @media (min-width: 767.99px) {
+  .about .container {
+    padding-top: 60px;
+  }
+
   .detailed-presentation {
     display: flex;
     justify-content: center;
