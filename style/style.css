@@ -519,17 +519,17 @@ nav > ul > li a {
     gap: 0.7rem; */
   }
 
-  .miniature {
+  .banniere-groupe {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: -webkit-fill-available;
     border-radius: 2px;
     box-shadow: 5px 5px 14px -1px rgb(0 0 0 / 39%);
+    margin-bottom: 2rem;
 
   }
   
   .accueil h2 {
-    padding-bottom: 4rem
+    padding-bottom: 2.5rem
   }
 
   /* fin breakpoint section accueil */
