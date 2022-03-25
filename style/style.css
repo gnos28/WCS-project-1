@@ -513,7 +513,7 @@ nav > ul > li a {
 
   .members-photo-accueil {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* margin: 1rem;
     flex-wrap: row-wrap;
     gap: 0.7rem; */
@@ -521,7 +521,7 @@ nav > ul > li a {
 
   .banniere-groupe {
     display: block;
-    width: -webkit-fill-available;
+    width: 90vw;
     border-radius: 2px;
     box-shadow: 5px 5px 14px -1px rgb(0 0 0 / 39%);
     margin-bottom: 2rem;
