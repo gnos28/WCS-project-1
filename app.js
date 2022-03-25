@@ -515,10 +515,7 @@ const presentationTable = [
     linkedinLink: '',
     twitterLink: '',
     profilePictureUrl: 'img/anthony.png',
-    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
-    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
-    assumenda accusantium corporis mollitia nisi necessitatibus
-    obcaecati accusamus. Obcaecati`,
+    presentationText: `Passionné par le web et curieux des nouvelles technologies, je suis sorti diplômé de la formation Designer Web du CEFIM en 2018.<br>Lors de ma dernière expérience professionnelle, j'ai effectué plusieurs travaux d'intégration de sites web et je souhaite désormais acquérir des compétences en développement web autour autour du langage JavaScript (ReactJS / NodeJs).<br>Mon projet est d'intégrer une agence qui me permettrait de gagner en expérience et d'enrichir mes connaissances avant de me lancer en freelance.`,
   },
 
   {
