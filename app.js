@@ -515,7 +515,7 @@ const presentationTable = [
     linkedinLink: 'https://www.linkedin.com/in/anthony-aubert-994927176/',
     twitterLink: '',
     profilePictureUrl: 'img/anthony.png',
-    presentationText: `Passionné par le web et curieux des nouvelles technologies, je suis sorti diplômé de la formation Designer Web du CEFIM en 2018.<br><br>Lors de ma dernière expérience professionnelle, j'ai effectué plusieurs travaux d'intégration de sites web et je souhaite désormais acquérir des compétences en développement web autour autour du langage JavaScript (ReactJS / NodeJs).<br>Mon projet est d'intégrer une agence qui me permettrait de gagner en expérience et d'enrichir mes connaissances avant de me lancer en freelance.`,
+    presentationText: `Passionné par le web et curieux des nouvelles technologies, je suis sorti diplômé de la formation Designer Web du CEFIM en 2018.<br><br>Lors de ma dernière expérience professionnelle, j'ai effectué plusieurs travaux d'intégration de sites web et je souhaite désormais acquérir des compétences en développement web autour autour du langage JavaScript (ReactJS / NodeJs).<br><br>Mon projet est d'intégrer une agence qui me permettrait de gagner en expérience et d'enrichir mes connaissances avant de me lancer en freelance.`,
   },
 
   {
