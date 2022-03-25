@@ -510,12 +510,12 @@ const presentationTable = [
     lastName: 'AUBERT',
     id: 'antho',
     jobTitle: 'Étudiant développeur full-stack JS',
-    githubLink: '',
+    githubLink: 'https://github.com/Antho-37',
     facebookLink: '',
-    linkedinLink: '',
+    linkedinLink: 'https://www.linkedin.com/in/anthony-aubert-994927176/',
     twitterLink: '',
     profilePictureUrl: 'img/anthony.png',
-    presentationText: `Passionné par le web et curieux des nouvelles technologies, je suis sorti diplômé de la formation Designer Web du CEFIM en 2018.<br>Lors de ma dernière expérience professionnelle, j'ai effectué plusieurs travaux d'intégration de sites web et je souhaite désormais acquérir des compétences en développement web autour autour du langage JavaScript (ReactJS / NodeJs).<br>Mon projet est d'intégrer une agence qui me permettrait de gagner en expérience et d'enrichir mes connaissances avant de me lancer en freelance.`,
+    presentationText: `Passionné par le web et curieux des nouvelles technologies, je suis sorti diplômé de la formation Designer Web du CEFIM en 2018.<br><br>Lors de ma dernière expérience professionnelle, j'ai effectué plusieurs travaux d'intégration de sites web et je souhaite désormais acquérir des compétences en développement web autour autour du langage JavaScript (ReactJS / NodeJs).<br>Mon projet est d'intégrer une agence qui me permettrait de gagner en expérience et d'enrichir mes connaissances avant de me lancer en freelance.`,
   },
 
   {
@@ -528,7 +528,7 @@ const presentationTable = [
     linkedinLink: '',
     twitterLink: '',
     profilePictureUrl: 'img/emma.png',
-    presentationText: `Étudiante de 21 ans, divers milieu m'intéressent tels que le domaine culinaire, l’environnement animalier ou encore le graphisme. Ayant toujours eu une affinité avec le monde de la tech, mon choix s'est finalement porté sur le web development.<br> Je suis actuellement une formation me permettant de devenir développeur full-stack, ayant toutefois une petite préférence pour le côté front-end ainsi que l’UI/UX.`,
+    presentationText: `Étudiante de 21 ans, divers milieu m'intéressent tels que le domaine culinaire, l’environnement animalier ou encore le graphisme. Ayant toujours eu une affinité avec le monde de la tech, mon choix s'est finalement porté sur le web development.<br><br> Je suis actuellement une formation me permettant de devenir développeur full-stack, ayant toutefois une petite préférence pour le côté front-end ainsi que l’UI/UX.`,
   },
 
   {
@@ -555,7 +555,7 @@ const presentationTable = [
     linkedinLink: 'https://www.linkedin.com/in/lora-perrichon-237000138/',
     twitterLink: '',
     profilePictureUrl: 'img/lora.png',
-    presentationText: `Après quelques années en tant que psychologue du travail, je me réoriente actuellement vers le métier de développeur web fullstack JS.<br> 
+    presentationText: `Après quelques années en tant que psychologue du travail, je me réoriente actuellement vers le métier de développeur web fullstack JS.<br><br> 
     Mon objectif est d’acquérir des bases solides afin de pouvoir intervenir sur les différentes phases de production d’un projet. Intéressée par le front et le back-end, mes trois années en qualité de psychologue du travail m’ont également permis de développer une appétence pour l’UI/UX design. 
     `,
   },
@@ -570,7 +570,8 @@ const presentationTable = [
     linkedinLink: 'https://www.linkedin.com/in/alexandre-pillias-ab3415234/',
     twitterLink: '',
     profilePictureUrl: 'img/alexandre.png',
-    presentationText: "Ayant eu une brève expérience avec le HTML et CSS étant plus jeune, j'ai choisis de faire cette formation pour consolider mes acquis dans ces derniers et découvrir un tout nouveau langage qu'est le Javascript.<br><br>J'ai eu la chance de faire une licence d'anglais et d'être en totale immersion pendant 8 mois en Angleterre, je suis à même à comprendre et parler l'anglais couramment.<br><br>J'ai pour ambition d'élargir mes champs de compétences et d'obtenir l'expérience professionnelle qui me manque. Mon projet final est de m'installer à l'étranger, dans un pays anglophone, et y faire ma vie.",
+    presentationText:
+      "Ayant eu une brève expérience avec le HTML et CSS étant plus jeune, j'ai choisis de faire cette formation pour consolider mes acquis dans ces derniers et découvrir un tout nouveau langage qu'est le Javascript.<br><br>J'ai eu la chance de faire une licence d'anglais et d'être en totale immersion pendant 8 mois en Angleterre, je suis à même à comprendre et parler l'anglais couramment.<br><br>J'ai pour ambition d'élargir mes champs de compétences et d'obtenir l'expérience professionnelle qui me manque. Mon projet final est de m'installer à l'étranger, dans un pays anglophone, et y faire ma vie.",
   },
 ]
 
@@ -630,7 +631,7 @@ presentationTable.forEach((person, personIndex) => {
   pictList.forEach((picto) => {
     const pictoLink = document.createElement('a')
     if (picto.socialLink.length) pictoLink.href = picto.socialLink
-    pictoLink.target = "_blank"
+    pictoLink.target = '_blank'
     const alt = picto.imgUrl.split('/')[1].split('.')[0]
     const pictoImg = document.createElement('img')
     pictoImg.src = picto.imgUrl
@@ -685,6 +686,21 @@ presentationTable.forEach((person, personIndex) => {
 
   container.appendChild(teamGoing)
 
+  if (personIndex < presentationTable.length - 1)
+  {
+    const divContainerChevron = document.createElement('div')
+    const aChevron = document.createElement('a')
+    const imgChevron = document.createElement('img')
+
+    divContainerChevron.classList.add('container-chevron')
+    aChevron.href = '#' + presentationTable[personIndex + 1].id
+    imgChevron.src = "img/chevrons.png"
+
+    aChevron.appendChild(imgChevron)
+    divContainerChevron.appendChild(aChevron)
+    section.appendChild(divContainerChevron)
+  }
+
   main.appendChild(section) // penser à rajouter les chevrons
 })
 
@@ -693,8 +709,8 @@ presentationTable.forEach((person, personIndex) => {
 // chopper largeur viewport
 let viewWidth = window.innerWidth
 let baseSquareSize = Math.floor(window.innerWidth * 0.055)
-if(baseSquareSize>88) baseSquareSize=88
-if(baseSquareSize<19) baseSquareSize=19
+if (baseSquareSize > 88) baseSquareSize = 88
+if (baseSquareSize < 19) baseSquareSize = 19
 let observer
 
 const addReveal = (firstLoad = false) => {
@@ -706,7 +722,6 @@ const addReveal = (firstLoad = false) => {
   if (firstLoad) observer = new IntersectionObserver(handleIntersect, options)
 
   reveals.forEach((reveal) => {
-
     // console.log("************* reveal.target", reveal)
     // console.log("reveal.isLoaded", reveal.isLoaded)
     // console.log("jquery height()",$(reveal).height())
@@ -848,8 +863,8 @@ const handleIntersect = function (reveals, observer) {
 window.addEventListener('resize', (e) => {
   viewWidth = window.innerWidth
   baseSquareSize = Math.floor(window.innerWidth * 0.055)
-  if(baseSquareSize>88) baseSquareSize=88
-  if(baseSquareSize<19) baseSquareSize=19
+  if (baseSquareSize > 88) baseSquareSize = 88
+  if (baseSquareSize < 19) baseSquareSize = 19
   addReveal()
 })
 
