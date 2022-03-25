@@ -523,15 +523,12 @@ const presentationTable = [
     lastName: 'BIGNON',
     id: 'emma',
     jobTitle: 'Étudiante développeuse full-stack JS',
-    githubLink: '',
+    githubLink: 'https://github.com/BignonEmma',
     facebookLink: '',
     linkedinLink: '',
     twitterLink: '',
     profilePictureUrl: 'img/emma.png',
-    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
-    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
-    assumenda accusantium corporis mollitia nisi necessitatibus
-    obcaecati accusamus. Obcaecati`,
+    presentationText: `Étudiante de 21 ans, divers milieu m'intéressent tels que le domaine culinaire, l’environnement animalier ou encore le graphisme. Ayant toujours eu une affinité avec le monde de la tech, mon choix s'est finalement porté sur le web development.<br> Je suis actuellement une formation me permettant de devenir développeur full-stack, ayant toutefois une petite préférence pour le côté front-end ainsi que l’UI/UX.`,
   },
 
   {
@@ -553,15 +550,14 @@ const presentationTable = [
     lastName: 'PERRICHON',
     id: 'lora',
     jobTitle: 'Étudiante développeuse full-stack JS',
-    githubLink: '',
+    githubLink: 'https://github.com/Lora048',
     facebookLink: '',
-    linkedinLink: '',
+    linkedinLink: 'https://www.linkedin.com/in/lora-perrichon-237000138/',
     twitterLink: '',
     profilePictureUrl: 'img/lora.png',
-    presentationText: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates assumenda natus officia odit saepe esse libero delectus temporibus? Eligendi velit ad quasi inventore ipsa modi autem architecto amet
-    magnam voluptate! Lorg elit. Deserunt deleniti consequatur sequi
-    assumenda accusantium corporis mollitia nisi necessitatibus
-    obcaecati accusamus. Obcaecati`,
+    presentationText: `Après quelques années en tant que psychologue du travail, je me réoriente actuellement vers le métier de développeur web fullstack JS.<br> 
+    Mon objectif est d’acquérir des bases solides afin de pouvoir intervenir sur les différentes phases de production d’un projet. Intéressée par le front et le back-end, mes trois années en qualité de psychologue du travail m’ont également permis de développer une appétence pour l’UI/UX design. 
+    `,
   },
 
   {
