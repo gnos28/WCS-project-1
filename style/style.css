@@ -137,13 +137,20 @@ h2 {
 }
 
 .reveal-block {
-  position: absolute;
-  display: block;
-  background-color: var(--var-name2);
-  z-index: 99;
-  /* border: 1px solid red; */
-  /* filter: opacity(0.5); */
+  display: none;
 }
+
+@media (min-width: 767.99px) {
+  .reveal-block {
+    position: absolute;
+    display: block;
+    background-color: var(--var-name2);
+    z-index: 99;
+    /* border: 1px solid red; */
+    /* filter: opacity(0.5); */
+  }
+}
+
 
 .reveal-animate {
   transform-origin: center;
@@ -209,11 +216,17 @@ h1 {
 }
 
 .container-chevron {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 767.99px) {
+  .container-chevron {
+    position: absolute;
+  }
 }
 
 .container-chevron img {
