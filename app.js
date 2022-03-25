@@ -528,7 +528,7 @@ const presentationTable = [
     linkedinLink: '',
     twitterLink: '',
     profilePictureUrl: 'img/emma.png',
-    presentationText: `Étudiante de 21 ans, divers milieu m'intéressent tels que le domaine culinaire, l’environnement animalier ou encore le graphisme. Ayant toujours eu une affinité avec le monde de la tech, mon choix s'est finalement porté sur le web development.<br><br> Je suis actuellement une formation me permettant de devenir développeur full-stack, ayant toutefois une petite préférence pour le côté front-end ainsi que l’UI/UX.`,
+    presentationText: `Étudiante de 21 ans, divers milieux m'intéressent tels que le domaine culinaire, l’environnement animalier ou encore le graphisme. Ayant toujours eu une affinité avec le monde de la tech, mon choix s'est finalement porté sur le web development.<br><br> Je suis actuellement une formation me permettant de devenir développeur full-stack, ayant toutefois une petite préférence pour le côté front-end ainsi que l’UI/UX.`,
   },
 
   {
@@ -542,7 +542,7 @@ const presentationTable = [
     twitterLink: '',
     profilePictureUrl: 'img/julien.png',
     presentationText:
-      "Fort de 10 années d'expérience au sein d'un service ressources humaines, je suis a même de comprendre vos problèmatiques, analyser vos processus et être force de proposition pour fluidifier votre gestion administrative.<br><br>L'expérience utilisateur et la satisfaction client sont mes priorités.<br><br>Mon ambition sur 2022 est d'élargir mon champ de compétences autour du javascript en acquérant la maitrise des frameworks react / react native et de la plateforme backend NodeJS afin de vous proposer à terme un écosystème digital complet (administration + visibilité + mobilité) et parfaitement adapté à vos besoins.",
+      "Fort de 10 années d'expérience au sein d'un service ressources humaines, je suis à même de comprendre vos problèmatiques, analyser vos processus et être force de proposition pour fluidifier votre gestion administrative.<br><br>L'expérience utilisateur et la satisfaction client sont mes priorités.<br><br>Mon ambition sur 2022 est d'élargir mon champ de compétences autour du javascript en acquérant la maitrise des frameworks react / react native et de la plateforme backend NodeJS afin de vous proposer à terme un écosystème digital complet (administration + visibilité + mobilité) et parfaitement adapté à vos besoins.",
   },
 
   {
